@@ -1,0 +1,269 @@
+@prefix : <http://purl.obolibrary.org/obo/sepio-clingen-dosage-valueset#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <http://purl.obolibrary.org/obo/sepio-clingen-actionability-valueset> .
+
+<http://purl.obolibrary.org/obo/sepio-clingen-actionability-valueset> rdf:type owl:Ontology ;
+                                                                rdfs:label "ClinGen Actionability Value Set Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/SEPIO_0000362
+obo:SEPIO_0000362 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/SEPIO_0000367
+obo:SEPIO_0000367 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/SEPIO_0000373
+obo:SEPIO_0000373 rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/SEPIO_0000374
+obo:SEPIO_0000374 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/SEPIO_0000412
+obo:SEPIO_0000412 rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+
+# ###  http://purl.obolibrary.org/obo/SEPIO_0000146
+# obo:SEPIO_0000146 rdf:type owl:NamedIndividual ,
+#                            skos:Concept ;
+#                   rdfs:label "has_evidence_level" ;
+#                   skos:inScheme obo:SEPIO_0002011 .
+
+
+# ###  http://purl.obolibrary.org/obo/SEPIO_0000375
+# obo:SEPIO_0000375 rdf:type owl:NamedIndividual ,
+#                            obo:SEPIO_0000412 ;
+#                   obo:SEPIO_0000362 obo:SEPIO_0000365 ;
+#                   obo:SEPIO_0000373 obo:hp ;
+#                   rdfs:label "Human Phenotype Value Set"@en .
+
+# ###  http://purl.obolibrary.org/obo/SEPIO_0002503
+# obo:SEPIO_0002503 rdf:type owl:NamedIndividual ,
+#                            obo:SEPIO_0000412 ;
+#                   rdfs:label "Scope Predicate Value Set"@en .
+
+
+# ###  http://purl.obolibrary.org/obo/hp
+# obo:hp rdf:type owl:NamedIndividual ,
+#                 obo:SEPIO_0000374 ;
+#        obo:SEPIO_0000367 "HP" ;
+#        rdfs:label "Human Phenotype Ontology" .
+
+
+### http://purl.obolibrary.org/obo/SEPIO_0003501
+obo:SEPIO_0003501 rdf:type owl:NamedIndividual ,
+                           obo:SEPIO_0000412 ;
+                  rdfs:label "Actionability Evidence Assertion Predicate Value Set"@en .
+
+###  http://purl.obolibrary.org/obo/SEPIO_0003502
+obo:SEPIO_0003502 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "actionable for" ;
+                  skos:inScheme obo:SEPIO_0003501 .
+
+###  http://purl.obolibrary.org/obo/SEPIO_0003503
+obo:SEPIO_0003503 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "not actionable for" ;
+                  skos:inScheme obo:SEPIO_0003501 .
+
+### http://purl.obolibrary.org/obo/SEPIO_0003504
+obo:SEPIO_0003504 rdf:type owl:NamedIndividual ,
+                           obo:SEPIO_0000412 ;
+                  rdfs:label "Severity Predicate Value Set"@en .
+
+###  http://purl.obolibrary.org/obo/SEPIO_0003505
+obo:SEPIO_0003505 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "has severity" ;
+                  skos:inScheme obo:SEPIO_0003504 .
+
+### http://purl.obolibrary.org/obo/SEPIO_0003506
+obo:SEPIO_0003506 rdf:type owl:NamedIndividual ,
+                           obo:SEPIO_0000412 ;
+                  rdfs:label "Actionability Predicate Value Set"@en .
+
+# phenotype_of
+obo:RO_0002201 rdf:type owl:NamedIndividual ,
+        skos:Concept ;
+    skos:inScheme obo:SEPIO_0003506 .
+
+obo:SEPIO_0003507 rdf:type owl:NamedIndividual ,
+        obo:SEPIO_0000412 ;
+    rdfs:label "Outcome Severity Value Set" .
+    
+obo:SEPIO_0003508 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "sudden death" ;
+                  skos:inScheme obo:SEPIO_0003507 .
+
+obo:SEPIO_0003509 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "possible death or major morbidity" ;
+                  skos:inScheme obo:SEPIO_0003507 .
+
+obo:SEPIO_0003510 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "modest morbidity" ;
+                  skos:inScheme obo:SEPIO_0003507 .
+
+obo:SEPIO_0003511 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "minimal or no morbidity" ;
+                  skos:inScheme obo:SEPIO_0003507 .
+
+obo:SEPIO_0003512 rdf:type owl:NamedIndividual ,
+        obo:SEPIO_0000412 ;
+    rdfs:label "Outcome Likelihood Value Set" .
+
+obo:SEPIO_0003513 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label ">40% chance" ;
+                  skos:inScheme obo:SEPIO_0003512 .
+
+obo:SEPIO_0003514 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "5-39% chance" ;
+                  skos:inScheme obo:SEPIO_0003512 .
+    
+obo:SEPIO_0003515 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "1-4% chance" ;
+                  skos:inScheme obo:SEPIO_0003512 .
+
+obo:SEPIO_0003516 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "<1% chance or unknown" ;
+                  skos:inScheme obo:SEPIO_0003512 .
+
+obo:SEPIO_0003517 rdf:type owl:NamedIndividual ,
+        obo:SEPIO_0000412 ;
+    rdfs:label "Evidence Level Value Set" .
+
+obo:SEPIO_0003518 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "substantial evidence" ;
+                  skos:inScheme obo:SEPIO_0003517 .
+
+obo:SEPIO_0003519 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "moderate evidence" ;
+                  skos:inScheme obo:SEPIO_0003517 .
+
+obo:SEPIO_0003520 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "minimal evidence" ;
+                  skos:inScheme obo:SEPIO_0003517 .
+
+obo:SEPIO_0003521 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "poor evidence" ;
+                  skos:inScheme obo:SEPIO_0003517 .
+
+obo:SEPIO_0003521 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "non-systematic evidence" ;
+                  skos:inScheme obo:SEPIO_0003517 .
+
+obo:SEPIO_0003522 rdf:type owl:NamedIndividual ,
+        obo:SEPIO_0000412 ;
+    rdfs:label "Intervention Predicate Value Set" .
+
+# capable of inhibiting or preventing pathological process
+obo:RO_0002599 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  skos:inScheme obo:SEPIO_0003522 .
+
+obo:SEPIO_0003523 rdf:type owl:NamedIndividual ,
+        obo:SEPIO_0000412 ;
+    rdfs:label "Intervention Efficacy Value Set" .
+
+obo:SEPIO_0003524 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "highly effective" ;
+                  skos:inScheme obo:SEPIO_0003523 .
+
+obo:SEPIO_0003525 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "moderately effective" ;
+                  skos:inScheme obo:SEPIO_0003523 .
+
+obo:SEPIO_0003526 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "minimally effective" ;
+                  skos:inScheme obo:SEPIO_0003523 .
+
+obo:SEPIO_0003527 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "controversial or no known intervention" ;
+                  skos:inScheme obo:SEPIO_0003523 .
+
+obo:SEPIO_0003528 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "ineffective/no intervention" ;
+                  skos:inScheme obo:SEPIO_0003523 .
+
+obo:SEPIO_0003529 rdf:type owl:NamedIndividual ,
+        obo:SEPIO_0000412 ;
+    rdfs:label "Burden Level Value Set" .
+
+obo:SEPIO_0003530 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "low risk/medically acceptable/ low intensity intervention" ;
+                  skos:inScheme obo:SEPIO_0003529 .
+
+obo:SEPIO_0003531 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "moderately acceptable/risk/ intensive intervention" ;
+                  skos:inScheme obo:SEPIO_0003529 .
+
+obo:SEPIO_0003532 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "greater risk/less acceptable/ substantial interventions" ;
+                  skos:inScheme obo:SEPIO_0003529 .
+
+obo:SEPIO_0003533 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "high risk/poor acceptable/ intensive or no intervention" ;
+                  skos:inScheme obo:SEPIO_0003529 .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+obo:SEPIO_0000363 obo:SEPIO_0000362 obo:SEPIO_0000365 .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
