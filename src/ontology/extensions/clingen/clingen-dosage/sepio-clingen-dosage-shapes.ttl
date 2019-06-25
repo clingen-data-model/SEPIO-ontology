@@ -1,0 +1,165 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cg: <http://dataexchange.clinicalgenome.org/terms/> .
+@prefix sepio: <http://purl.obolibrary.org/obo/SEPIO_> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geno: <http://purl.obolibrary.org/obo/GENO_> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix so: <http://purl.obolibrary.org/obo/SO_> .
+@prefix mondo: <http://purl.obolibrary.org/obo/MONDO_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix omim: <http://purl.obolibrary.org/obo/OMIM_> .
+
+
+cg:PropositionScopeAssertionShape
+    a sh:NodeShape ;
+    # sh:targetClass sepio:0002014 ;
+    sh:class sepio:0002014 ;
+    sh:property [
+        sh:path sepio:0000388 ;
+        sh:name "Gene Dosage Proposition" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node cg:GeneDosagePropositionShape ;
+        ] ;
+    sh:property [
+        sh:path (sepio:0000390 skos:inScheme) ;
+        sh:name "Evidence Level Object" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue sepio:0002501 ;
+        ] ; 
+    sh:property [
+        sh:path (sepio:0000389 skos:inScheme) ;
+        sh:name "Evidence Level Predicate" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue sepio:0002503 ;
+        ] .
+
+cg:EvidenceLevelAssertionShape
+    a sh:NodeShape ;
+    # sh:targetClass sepio:0002001 ;
+    sh:targetNode <https://search.clinicalgenome.org/r/cg_ISCA-35994x3-2012-07-06T19:29:12Z> ;
+    sh:class sepio:0002001 ;
+    sh:property [
+        sh:path sepio:0000388 ;
+        sh:name "Gene Dosage Proposition" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node cg:GeneDosagePropositionShape ;
+        ] ;
+    sh:property [
+        sh:path (sepio:0000389 skos:inScheme) ;
+        sh:name "Evidence Level Predicate" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue sepio:0002011 ;
+        ] ;
+    sh:property [
+        sh:path (sepio:0000390 skos:inScheme) ;
+        sh:name "Evidence Level Object" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue sepio:0002005 ;
+        ] ; 
+    sh:property [
+        sh:path sepio:0000189 ;
+        sh:node cg:StudyFindingShape ;
+        ] .
+        
+cg:GeneDosagePropositionShape 
+    a sh:NodeShape ;
+    sh:class sepio:0002003 ;
+    # sh:property [
+    #     sh:path sepio:0000388 ;
+    #     sh:name "Proposition Subject" ;
+    #     sh:minCount 1 ;
+    #     sh:maxCount 1 ;
+    #     sh:node cg:GeneDosageShape
+    #     ] ;
+    sh:property [
+        sh:path sepio:0000389 ;
+        sh:name "Proposition Predicate" ;
+        sh:qualifiedValueShape [
+            sh:path skos:inScheme ;
+            sh:hasValue sepio:0002010 ;
+            ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path (sepio:0000390 [sh:zeroOrOnePath [sh:inversePath owl:equivalentClass]]
+            [sh:zeroOrMorePath rdfs:subClassOf]) ;
+        sh:name "Proposition Object" ;
+        sh:hasValue mondo:0000001 ;
+        ] .
+
+cg:GeneDosageShape
+    a sh:NodeShape ;
+    sh:class geno:0000923 ;
+    sh:property [
+        sh:path geno:0000917 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        ] ;
+    sh:xone (
+        [
+            sh:property [
+                sh:path ( geno:0000445 rdf:type ) ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue so:0000704 ; # gene
+                ] 
+            ]
+        [
+            sh:property [
+                sh:path geno:0000445 ;
+                sh:minCount 1 ;
+                sh:node sh:RegionShape ;
+                ] 
+            ]        
+        ) .
+
+sh:RegionShape
+    a sh:NodeShape ;
+    sh:class geno:0000902 ;
+    sh:property [
+        sh:path faldo:reference ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path geno:0000894 ; # begin coordinate
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        ] ;
+    sh:property [
+        sh:path geno:0000895 ; # end coordinate
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        ] .
+        
+    
+cg:StudyFindingShape
+    a sh:NodeShape ;
+    sh:class sepio:0000173 ;
+    sh:property [
+        sh:path iao:0000115 ;
+        sh:minCount 1 ;
+        ] ;
+    sh:property [
+        sh:path dc:description ;
+        ] .
+        
+        
+
+    

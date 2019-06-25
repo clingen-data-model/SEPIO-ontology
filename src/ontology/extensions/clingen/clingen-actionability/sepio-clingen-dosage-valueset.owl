@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/sepio-clingen-dosage-valueset#"
+     xml:base="http://purl.obolibrary.org/obo/sepio-clingen-dosage-valueset"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/sepio-clingen-dosage-valueset">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/sepio-valueset.owl"/>
+        <rdfs:label>ClinGen Gene Dosage Sensitivity Value Set Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GENO_0000840 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000840">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002010"/>
+    </owl:NamedIndividual>
+    
+    <!-- http://purl.obolibrary.org/obo/GENO_0000843 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/GENO_0000843">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002010"/>
+    </owl:NamedIndividual>
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000146 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000146">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002011"/>
+        <rdfs:label>has_evidence_level</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000363 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000363">
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0000375 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0000375">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000365"/>
+        <obo:SEPIO_0000373 rdf:resource="http://purl.obolibrary.org/obo/hp"/>
+        <rdfs:label xml:lang="en">Human Phenotype Value Set</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002005 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002005">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <obo:SEPIO_0000362 rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000364"/>
+        <rdfs:label xml:lang="en">Evidence Level Value Set</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002006 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002006">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
+        <rdfs:label xml:lang="en">sufficient evidence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002007 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002007">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
+        <rdfs:label xml:lang="en">minimal evidence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002008 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002008">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
+        <rdfs:label xml:lang="en">no evidence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002009 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002009">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
+        <rdfs:label xml:lang="en">moderate evidence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002010 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002010">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <rdfs:label xml:lang="en">Proposition Predicate Value Set</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002011 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002011">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <rdfs:label xml:lang="en">Assertion Predicate Value Set</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002501 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002501">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <rdfs:label xml:lang="en">Scope Assertion Value Set</rdfs:label>
+    </owl:NamedIndividual>
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002502 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002502">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002501"/>
+        <rdfs:label xml:lang="en">gene associated with autosomal recessive phenotype</rdfs:label>
+    </owl:NamedIndividual>
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002503 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002503">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000412"/>
+        <rdfs:label xml:lang="en">Scope Predicate Value Set</rdfs:label>
+    </owl:NamedIndividual>
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002504 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002504">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002503"/>
+        <rdfs:label xml:lang="en">is in scope</rdfs:label>
+    </owl:NamedIndividual>
+
+
+    <!-- http://purl.obolibrary.org/obo/SEPIO_0002505 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002505">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002503"/>
+        <rdfs:label xml:lang="en">is out of scope</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://purl.obolibrary.org/obo/hp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/hp">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000374"/>
+        <obo:SEPIO_0000367>HP</obo:SEPIO_0000367>
+        <rdfs:label>Human Phenotype Ontology</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
