@@ -17,7 +17,7 @@
 
 cg:GeneDosageModel
     a cg:DomainModel ;
-    rdfs:label "Gene Dosage Model" ;
+    rdfs:label "Gene Dosage Model" .
 
 cg:PropositionScopeAssertionShape
     a sh:NodeShape ;
