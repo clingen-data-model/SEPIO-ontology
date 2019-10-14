@@ -15,9 +15,12 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix omim: <http://purl.obolibrary.org/obo/OMIM_> .
 
+cg:GeneDosageModel
+    a cg:DomainModel .
 
 cg:PropositionScopeAssertionShape
     a sh:NodeShape ;
+    cg:is_in_model cg:GeneDosageModel ;
     # sh:targetClass sepio:0002014 ;
     sh:class sepio:0002014 ;
     sh:property [
@@ -44,6 +47,7 @@ cg:PropositionScopeAssertionShape
 
 cg:EvidenceLevelAssertionShape
     a sh:NodeShape ;
+    cg:is_in_model cg:GeneDosageModel ;
     # sh:targetClass sepio:0002001 ;
     sh:targetNode <https://search.clinicalgenome.org/r/cg_ISCA-35994x3-2012-07-06T19:29:12Z> ;
     sh:class sepio:0002001 ;
@@ -75,6 +79,7 @@ cg:EvidenceLevelAssertionShape
         
 cg:GeneDosagePropositionShape 
     a sh:NodeShape ;
+    cg:is_in_model cg:GeneDosageModel ;
     sh:class sepio:0002003 ;
     # sh:property [
     #     sh:path sepio:0000388 ;
@@ -102,6 +107,7 @@ cg:GeneDosagePropositionShape
 
 cg:GeneDosageShape
     a sh:NodeShape ;
+    cg:is_in_model cg:GeneDosageModel ;
     sh:class geno:0000923 ;
     sh:property [
         sh:path geno:0000917 ;
@@ -129,6 +135,7 @@ cg:GeneDosageShape
 
 sh:RegionShape
     a sh:NodeShape ;
+    cg:is_in_model cg:GeneDosageModel ;
     sh:class geno:0000902 ;
     sh:property [
         sh:path faldo:reference ;
@@ -151,6 +158,7 @@ sh:RegionShape
     
 cg:StudyFindingShape
     a sh:NodeShape ;
+    cg:is_in_model cg:GeneDosageModel ;
     sh:class sepio:0000173 ;
     sh:property [
         sh:path iao:0000115 ;
