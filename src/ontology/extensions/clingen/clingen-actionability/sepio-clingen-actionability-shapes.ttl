@@ -1,0 +1,67 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cg: <http://dataexchange.clinicalgenome.org/terms/> .
+@prefix sepio: <http://purl.obolibrary.org/obo/SEPIO_> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geno: <http://purl.obolibrary.org/obo/GENO_> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dc-t: <http://purl.org/dc/terms/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix so: <http://purl.obolibrary.org/obo/SO_> .
+@prefix mondo: <http://purl.obolibrary.org/obo/MONDO_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix omim: <http://purl.obolibrary.org/obo/OMIM_> .
+
+cg:ActionabilityModel
+    a cg:DomainModel ;
+    rdfs:label "Actionability Model" .
+    
+cg:ActionabilityReportShape
+    a sh:NodeShape ;
+    cg:is_in_model cg:ActionabilityModel ;
+    sh:class sepio:0003010 ; # sepio:ActionabilityReport
+    sh:property [
+        sh:path sepio:0000159 ; 
+        sh:name "Qualified Contribution" ;
+        sh:description "Groups or individuals that contributed to the report. For actionability curations, this is typically limited to the Adult or Pediatric Actionability Working Group" ;
+        sh:minCount 1 ;
+        sh:node cg:QualifiedContributionShape ;
+        ] ;
+    sh:property [
+        sh:path dc:source;
+        sh:name "Source" ;
+        sh:description "Human-readable origin of the report" ;
+        ] .
+        
+cg:QualifiedContributionShape 
+    a sh:NodeShape ;
+    cg:is_in_model cg:ActionabilityModel ;
+    sh:class sepio:0000158 ; # Contribution
+    sh:property [
+        sh:path sepio:0000160 ;
+        sh:name "Activity date" ;
+        sh:description "Date the report was finalized" ;
+        ] ;
+    sh:property [
+        sh:path bfo:0000055 ;
+        sh:name "Realizes" ;
+        sh:description "Role that the contribution realizes. This is always sepio:ApproverRole."
+        ] ;
+    sh:property [
+        sh:path sepio:0000017 ;
+        sh:name "Has Agent" ;
+        sh:description "Agent responsible for the contribution. Typically Adult/Pediatric Actionability Working Group" ;
+        sh:node cg:AgentShape ;
+        ] .
+        
+
+        
+
+        
+        
+        
+    
