@@ -9,12 +9,13 @@
 @prefix geno: <http://purl.obolibrary.org/obo/GENO_> .
 @prefix iao: <http://purl.obolibrary.org/obo/IAO_> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dc-t: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
 @prefix so: <http://purl.obolibrary.org/obo/SO_> .
 @prefix mondo: <http://purl.obolibrary.org/obo/MONDO_> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix omim: <http://purl.obolibrary.org/obo/OMIM_> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO_> .
 
 cg:ActionabilityModel
     a cg:DomainModel ;
@@ -23,6 +24,7 @@ cg:ActionabilityModel
 cg:ActionabilityReportShape
     a sh:NodeShape ;
     cg:is_in_model cg:ActionabilityModel ;
+    sh:targetClass sepio:0003010 ;
     sh:class sepio:0003010 ; # sepio:ActionabilityReport
     sh:property [
         sh:path sepio:0000159 ; 
@@ -32,15 +34,23 @@ cg:ActionabilityReportShape
         sh:node cg:QualifiedContributionShape ;
         ] ;
     sh:property [
-        sh:path dc:source;
+        sh:path dc:source ;
         sh:name "Source" ;
         sh:description "Human-readable origin of the report" ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path sepio:0000276 ;
+        sh:name "Genetic Condition" ;
+        sh:description "Genetic condition(s) described in the report." ;
+        sh:minCount 1 ;
         ] .
         
 cg:QualifiedContributionShape 
     a sh:NodeShape ;
     cg:is_in_model cg:ActionabilityModel ;
-    sh:class sepio:0000158 ; # Contribution
+    # sh:class sepio:0000158 ; # Contribution
     sh:property [
         sh:path sepio:0000160 ;
         sh:name "Activity date" ;

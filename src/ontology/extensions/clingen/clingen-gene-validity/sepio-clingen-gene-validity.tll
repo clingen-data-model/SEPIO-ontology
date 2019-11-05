@@ -92,8 +92,10 @@ obo:SEPIO_0004003 rdf:type owl:Class ;
     obo:IAO_0000115 "A specification that describes how to interpret evidence in order to make an assertion about the evidence level supporting a gene validity proposition" ;
     rdfs:label "gene validity evaluation guideline" .
     
-
-
+obo:SEPIO_0004004 rdf:type owl:Class ;
+    rdfs:subClassOf obo:BFO_0000003 ; # Occurant, might be more appropriate as continuant
+    obo:IAO_0000115 "A report containing a gene-disease validity evidence level assertion" ;
+    rdfs:label "gene validity report" .
 
 #################################################################
 p#    Individuals
