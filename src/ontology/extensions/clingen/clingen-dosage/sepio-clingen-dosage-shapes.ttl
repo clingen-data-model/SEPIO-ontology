@@ -22,7 +22,7 @@ cg:GeneDosageModel
 cg:PropositionScopeAssertionShape
     a sh:NodeShape ;
     cg:is_in_model cg:GeneDosageModel ;
-    # sh:targetClass sepio:0002014 ;
+    sh:targetClass sepio:0002014 ;
     sh:class sepio:0002014 ;
     sh:property [
         sh:path sepio:0000388 ;
@@ -49,8 +49,7 @@ cg:PropositionScopeAssertionShape
 cg:EvidenceLevelAssertionShape
     a sh:NodeShape ;
     cg:is_in_model cg:GeneDosageModel ;
-    # sh:targetClass sepio:0002001 ;
-    sh:targetNode <https://search.clinicalgenome.org/r/cg_ISCA-35994x3-2012-07-06T19:29:12Z> ;
+    sh:targetClass sepio:0002001 ;
     sh:class sepio:0002001 ;
     sh:property [
         sh:path sepio:0000388 ;
