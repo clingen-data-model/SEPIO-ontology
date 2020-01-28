@@ -1,0 +1,354 @@
+@prefix : <http://purl.obolibrary.org/obo/sepio-clingen-gene-validity.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix sepio: <http://purl.obolibrary.org/obo/SEPIO_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@base <http://purl.obolibrary.org/obo/sepio-clingen-gene-validity.owl> .
+
+<http://purl.obolibrary.org/obo/sepio-clingen-gene-validity> a owl:Ontology ;
+    owl:imports obo:sepio-clingen-gene-validity-valueset ,
+        obo:sepio.owl ;      
+    terms:contributor "Tristan Nelson", "Chris Bizon" ,  
+        "Larry Babb" ,
+        "Matthew Brush" ;
+    terms:description """This ontology extends the core SEPIO ontology to enable representation of assertions about the level of evidence supporting the relationship between a gene and a disease.  It was created by the ClinGen Data Exchange Working Group [1], to support a SEPIO profile to structure the outputs of ClinGen's actionability curation efforts [2]. 
+
+
+[1] https://clinicalgenome.org/curation-activities/dosage-sensitivity/
+[2] https://onlinelibrary.wiley.com/doi/full/10.1111/j.1399-0004.2011.01818.x""" ;
+    rdfs:label "SEPIO ClinGen Gene Validity Ontology" .
+    
+
+
+# TODO clean up labels; descriptive and consistent (particularly between evidence lines and evidence items) is preferred.
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+obo:IAO_0000112 a owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 a owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor a owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description a owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+terms:source a owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/RO_0000091
+obo:RO_0000091 a owl:ObjectProperty ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" ;
+               rdfs:label "has disposition" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+# # TODO identify appropriate superclass for actionability curation, maybe prov:activity
+# sepio:0003001 a owl:Class ;
+#                   rdfs:subClassOf prov:Activity ;
+#                   obo:IAO_0000115 "An actionability curation activity" ;
+#                   rdfs:label "Actionability Curation Activity"@en .
+
+
+sepio:0004001 a owl:Class ;
+    rdfs:subClassOf sepio:0000000 ;
+    obo:IAO_0000115 "A proposition that variants affecting the transcription of a gene are causal for a given condition" ;
+    rdfs:label "gene validity proposition" .
+    
+sepio:0004002 a owl:Class ;
+    rdfs:subClassOf sepio:0000001 ;
+    obo:IAO_0000115 "An assertion regarding the level of evidence supporting a gene validity proposition" ;
+    rdfs:label "gene validity evidence level assertion" .
+    
+sepio:0004003 a owl:Class ;
+    rdfs:subClassOf sepio:0000037 ;
+    obo:IAO_0000115 "A specification that describes how to interpret evidence in order to make an assertion about the evidence level supporting a gene validity proposition" ;
+    rdfs:label "gene validity evaluation guideline" .
+    
+sepio:0004004 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000003 ; # Occurant, might be more appropriate as continuant
+    obo:IAO_0000115 "A report containing a gene-disease validity evidence level assertion" ;
+    rdfs:label "gene validity report" .
+
+### Evidence Lines ###
+
+sepio:0004005 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "genetic evidence line"@en .
+    
+sepio:0004006 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "experimental evidence line"@en .
+    
+sepio:0004007 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "case control evidence line"@en .
+
+sepio:0004008 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "autosomal recessive case level evidence line"@en .
+
+sepio:0004009 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "autosomal dominant de novo variant evidence line"@en .
+
+sepio:0004010 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "autosomal dominant null variant evidence line"@en .
+
+sepio:0004011 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "autosomal dominant other variant evidence line"@en .
+
+sepio:0004012 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "segregation evidence line"@en .
+    
+sepio:0004013 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "functional evidence line"@en .
+    
+sepio:0004014 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "functional alteration evidence line"@en .
+
+sepio:0004015 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "model and rescue evidence line"@en .
+
+sepio:0004016 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "model and rescue evidence line"@en .
+
+sepio:0004017 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "autosomal recessive de novo null variant evidence line"@en .
+
+sepio:0004018 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "autosomal recessive null variant evidence line"@en .
+
+sepio:0004019 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "autosomal recessive other variant evidence line"@en .
+
+sepio:0004020 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "case control single study evidence line"@en .
+
+sepio:0004021 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "case control aggregate evidence line"@en .
+
+sepio:0004022 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "biochemical function evidence line"@en .
+
+sepio:0004023 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "protein interaction evidence line"@en .
+
+sepio:0004024 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "gene expression evidence line"@en .
+
+sepio:0004025 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "patient functional alteration evidence line"@en .
+
+sepio:0004026 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "non-patient functional alteration evidence line"@en .
+
+sepio:0004027 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "non-human model evidence line"@en .
+
+sepio:0004028 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "cell culture model evidence line"@en .
+
+sepio:0004029 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "human model rescue evidence line"@en .
+
+sepio:0004030 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "non-human model rescue evidence line"@en .
+
+sepio:0004031 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "rescue in cell culture evidence line"@en .
+
+sepio:0004032 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "rescue in patient cells evidence line"@en .
+
+### Evidence Items ###
+
+sepio:0004033 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "autosomal dominant de novo variant evidence item"@en .
+
+sepio:0004034 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "autosomal dominant null variant evidence item"@en .
+
+sepio:0004035 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "autosomal dominant other variant evidence item"@en .
+
+sepio:0004036 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "clinical segregation evidence item"@en .
+
+sepio:0004037 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "autosomal recessive de novo variant evidence item"@en .
+
+sepio:0004038 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "autosomal recessive other variant evidence item"@en .
+
+sepio:0004039 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "case control single study evidence item"@en .
+
+sepio:0004040 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "case control aggregate study evidence item"@en .
+
+sepio:0004041 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "biochemical function evidence item"@en .
+
+sepio:0004042 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "protein interaction evidence item"@en .
+
+sepio:0004043 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "gene expression evidence item"@en .
+
+sepio:0004044 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "functional alteration in patient cells evidence item"@en .
+
+sepio:0004045 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "functional alteration in non-patient cells evidence item"@en .
+
+sepio:0004046 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "non-human model organism evidence item"@en .
+
+sepio:0004047 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "cell culture model evidence item"@en .
+
+sepio:0004048 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "rescue in human evidence item"@en .
+
+sepio:0004049 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "rescue in non-human model evidence item"@en .
+
+sepio:0004050 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "rescue in cell culture evidence item"@en .
+
+sepio:0004051 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "rescue in patient cells evidence item"@en .
+
+### Criterion Assessments ###
+    
+sepio:0004052 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "genetic evidence criterion assessment"@en .
+
+sepio:0004053 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "experimental evidence criterion assessment"@en .
+
+sepio:0004054 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "case control evidence criterion assessment"@en .
+
+sepio:0004055 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "autosomal recessive case level criterion assessment"@en .
+
+sepio:0004056 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "autosomal dominant de novo variant criterion assessment"@en .
+
+sepio:0004057 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "autosomal dominant null variant criterion assessment"@en .
+
+sepio:0004058 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "autosomal dominant other variant  criterion assessment"@en .
+
+sepio:0004059 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "segregation criterion assessment"@en .
+
+sepio:0004060 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "protein function criterion assessment"@en .
+
+sepio:0004061 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "functional alteration evidence criterion assessment"@en .
+
+sepio:0004062 rdfs:type owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    rdfs:label "model and rescue evidence criterion assessment"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.obolibrary.org/obo/SEPIO_0003000
+sepio:0004063 a owl:NamedIndividual ,
+                           sepio:0002002 ;
+                  rdfs:label "ClinGen Gene Validity Evaluation Guideline"@en .
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
