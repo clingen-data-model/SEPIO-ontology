@@ -1,0 +1,116 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cg: <http://dataexchange.clinicalgenome.org/terms/> .
+@prefix sepio: <http://purl.obolibrary.org/obo/SEPIO_> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geno: <http://purl.obolibrary.org/obo/GENO_> .
+@prefix iao: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix so: <http://purl.obolibrary.org/obo/SO_> .
+@prefix mondo: <http://purl.obolibrary.org/obo/MONDO_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix omim: <http://purl.obolibrary.org/obo/OMIM_> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+
+cg:GeneValidityModel a cg:DomainModel ;
+    rdfs:label "Gene Validity Model" .
+
+# properties
+bfo:0000051 skos:inScheme cg:GeneValidityModel . # has part
+sepio:0000388 skos:inScheme cg:GeneValidityModel . # has subject
+sepio:0000389 skos:inScheme cg:GeneValidityModel . # has predicate
+sepio:0000390 skos:inScheme cg:GeneValidityModel . # has object
+sepio:0000144 skos:inScheme cg:GeneValidityModel . # has qualifier
+sepio:0000159 skos:inScheme cg:GeneValidityModel . # has qualified contribution
+rdfs:label skos:inScheme cg:GeneValidityModel .
+sepio:0000055 skos:inScheme cg:GeneValidityModel . # realizes
+sepio:0004063 skos:inScheme cg:GeneValidityModel . # evidence score qualifier
+sepio:0000006 skos:inScheme cg:GeneValidityModel . # has evidence line
+dc:source skos:inScheme cg:GeneValidityModel .
+dc:description skos:inScheme cg:GeneValidityModel .
+sepio:0000275 skos:inScheme cg:GeneValidityModel . # is about allele
+sepio:0000183 skos:inScheme cg:GeneValidityModel . # evidence direction
+
+# classes (refer to dosage model for labels
+sepio:0004001 skos:inScheme cg:GeneValidityModel .
+sepio:0004002 skos:inScheme cg:GeneValidityModel .
+sepio:0004003 skos:inScheme cg:GeneValidityModel .
+sepio:0004004 skos:inScheme cg:GeneValidityModel .
+sepio:0004005 skos:inScheme cg:GeneValidityModel .
+sepio:0004006 skos:inScheme cg:GeneValidityModel .
+sepio:0004007 skos:inScheme cg:GeneValidityModel .
+sepio:0004008 skos:inScheme cg:GeneValidityModel .
+sepio:0004009 skos:inScheme cg:GeneValidityModel .
+sepio:0004010 skos:inScheme cg:GeneValidityModel .
+sepio:0004011 skos:inScheme cg:GeneValidityModel .
+sepio:0004012 skos:inScheme cg:GeneValidityModel .
+sepio:0004013 skos:inScheme cg:GeneValidityModel .
+sepio:0004014 skos:inScheme cg:GeneValidityModel .
+sepio:0004015 skos:inScheme cg:GeneValidityModel .
+sepio:0004016 skos:inScheme cg:GeneValidityModel .
+sepio:0004017 skos:inScheme cg:GeneValidityModel .
+sepio:0004018 skos:inScheme cg:GeneValidityModel .
+sepio:0004019 skos:inScheme cg:GeneValidityModel .
+sepio:0004020 skos:inScheme cg:GeneValidityModel .
+sepio:0004021 skos:inScheme cg:GeneValidityModel .
+sepio:0004022 skos:inScheme cg:GeneValidityModel .
+sepio:0004023 skos:inScheme cg:GeneValidityModel .
+sepio:0004024 skos:inScheme cg:GeneValidityModel .
+sepio:0004025 skos:inScheme cg:GeneValidityModel .
+sepio:0004026 skos:inScheme cg:GeneValidityModel .
+sepio:0004027 skos:inScheme cg:GeneValidityModel .
+sepio:0004028 skos:inScheme cg:GeneValidityModel .
+sepio:0004029 skos:inScheme cg:GeneValidityModel .
+sepio:0004030 skos:inScheme cg:GeneValidityModel .
+sepio:0004031 skos:inScheme cg:GeneValidityModel .
+sepio:0004032 skos:inScheme cg:GeneValidityModel .
+sepio:0004033 skos:inScheme cg:GeneValidityModel .
+sepio:0004034 skos:inScheme cg:GeneValidityModel .
+sepio:0004035 skos:inScheme cg:GeneValidityModel .
+sepio:0004036 skos:inScheme cg:GeneValidityModel .
+sepio:0004037 skos:inScheme cg:GeneValidityModel .
+sepio:0004038 skos:inScheme cg:GeneValidityModel .
+sepio:0004039 skos:inScheme cg:GeneValidityModel .
+sepio:0004040 skos:inScheme cg:GeneValidityModel .
+sepio:0004041 skos:inScheme cg:GeneValidityModel .
+sepio:0004042 skos:inScheme cg:GeneValidityModel .
+sepio:0004043 skos:inScheme cg:GeneValidityModel .
+sepio:0004044 skos:inScheme cg:GeneValidityModel .
+sepio:0004045 skos:inScheme cg:GeneValidityModel .
+sepio:0004046 skos:inScheme cg:GeneValidityModel .
+sepio:0004047 skos:inScheme cg:GeneValidityModel .
+sepio:0004048 skos:inScheme cg:GeneValidityModel .
+sepio:0004049 skos:inScheme cg:GeneValidityModel .
+sepio:0004050 skos:inScheme cg:GeneValidityModel .
+sepio:0004051 skos:inScheme cg:GeneValidityModel .
+sepio:0004052 skos:inScheme cg:GeneValidityModel .
+sepio:0004053 skos:inScheme cg:GeneValidityModel .
+sepio:0004054 skos:inScheme cg:GeneValidityModel .
+sepio:0004055 skos:inScheme cg:GeneValidityModel .
+sepio:0004056 skos:inScheme cg:GeneValidityModel .
+sepio:0004057 skos:inScheme cg:GeneValidityModel .
+sepio:0004058 skos:inScheme cg:GeneValidityModel .
+sepio:0004059 skos:inScheme cg:GeneValidityModel .
+sepio:0004060 skos:inScheme cg:GeneValidityModel .
+sepio:0004061 skos:inScheme cg:GeneValidityModel .
+sepio:0004062 skos:inScheme cg:GeneValidityModel .
+sepio:0004064 skos:inScheme cg:GeneValidityModel .
+
+# value sets and members
+sepio:0004501 skos:inScheme cg:GeneValidityModel .
+ro:0004013 skos:inScheme cg:GeneValidityModel . # gene mutations causal for
+sepio:0004502 skos:inScheme cg:GeneValidityModel .
+sepio:0000146 skos:inScheme cg:GeneValidityModel .
+sepio:0004503 skos:inScheme cg:GeneValidityModel .
+sepio:0004504 skos:inScheme cg:GeneValidityModel .
+sepio:0004505 skos:inScheme cg:GeneValidityModel .
+sepio:0004506 skos:inScheme cg:GeneValidityModel .
+sepio:0004507 skos:inScheme cg:GeneValidityModel .
+sepio:0004508 skos:inScheme cg:GeneValidityModel .
+sepio:0004509 skos:inScheme cg:GeneValidityModel .
+sepio:0004510 skos:inScheme cg:GeneValidityModel .
