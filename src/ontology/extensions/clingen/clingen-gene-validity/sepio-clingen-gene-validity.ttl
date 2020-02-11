@@ -66,20 +66,32 @@ terms:source a owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/RO_0000091
 obo:RO_0000091 a owl:ObjectProperty ;
-    obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" ;
-    rdfs:label "has disposition" .
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" ;
+               rdfs:label "has disposition" .
 
 
 sepio:0004063 a owl:ObjectProperty ;
-    obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" ;
+    obo:IAO_0000115 "Possibly obsolete?" ;
     rdfs:label "evidence score qualifier" .
 
+#################################################################
+#    Datatype Properties
+#################################################################
 
-
+sepio:0004065 a owl:DatatypeProperty ;
+    obo:IAO_0000115 "quantitative score reflecting the strength of evidence supporting the assertion" ;
+    rdfs:label "evidence strength score" .
 
 #################################################################
 #    Classes
 #################################################################
+
+
+# # TODO identify appropriate superclass for actionability curation, maybe prov:activity
+# sepio:0003001 a owl:Class ;
+#                   rdfs:subClassOf prov:Activity ;
+#                   obo:IAO_0000115 "An actionability curation activity" ;
+#                   rdfs:label "Actionability Curation Activity"@en .
 
 
 sepio:0004001 a owl:Class ;
@@ -186,11 +198,11 @@ sepio:0004024 a owl:Class ;
 
 sepio:0004025 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "patient functional alteration evidence line"@en .
+    rdfs:label "functional alteration in patient cells evidence line"@en .
 
 sepio:0004026 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "non-patient functional alteration evidence line"@en .
+    rdfs:label "functional alteration in non-patient cells evidence line"@en .
 
 sepio:0004027 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
@@ -296,59 +308,95 @@ sepio:0004051 a owl:Class ;
 
 ### Criterion Assessments ###
     
-sepio:0004052 rdfs:type owl:Class ;
+sepio:0004052 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "genetic evidence criterion assessment"@en .
 
-sepio:0004053 rdfs:type owl:Class ;
+sepio:0004053 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "experimental evidence criterion assessment"@en .
 
-sepio:0004054 rdfs:type owl:Class ;
+sepio:0004054 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "case control evidence criterion assessment"@en .
 
-sepio:0004055 rdfs:type owl:Class ;
+sepio:0004055 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "autosomal recessive case level criterion assessment"@en .
 
-sepio:0004056 rdfs:type owl:Class ;
+sepio:0004056 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "autosomal dominant de novo variant criterion assessment"@en .
 
-sepio:0004057 rdfs:type owl:Class ;
+sepio:0004057 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "autosomal dominant null variant criterion assessment"@en .
 
-sepio:0004058 rdfs:type owl:Class ;
+sepio:0004058 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "autosomal dominant other variant  criterion assessment"@en .
 
-sepio:0004059 rdfs:type owl:Class ;
+sepio:0004059 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "segregation criterion assessment"@en .
 
-sepio:0004060 rdfs:type owl:Class ;
+sepio:0004060 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "protein function criterion assessment"@en .
 
-sepio:0004061 rdfs:type owl:Class ;
+sepio:0004061 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "functional alteration evidence criterion assessment"@en .
 
-sepio:0004062 rdfs:type owl:Class ;
+sepio:0004062 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
     rdfs:label "model and rescue evidence criterion assessment"@en .
-
+    
 
 #################################################################
 #    Individuals
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/SEPIO_0003000
-sepio:0004064 a owl:NamedIndividual ,
-                           sepio:0002002 ;
+sepio:0004064 a owl:NamedIndividual , sepio:0002002 ;
                   rdfs:label "ClinGen Gene Validity Evaluation Guideline"@en .
 
 
+### Criteria for criterion assessments ###
 
+sepio:0004066 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen genetic evidence criteria"@en .
+
+sepio:0004067 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen experimental evidence criteria"@en .
+
+sepio:0004068 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen case control evidence criteria"@en .
+
+sepio:0004069 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen autosomal recessive case level criteria"@en .
+
+sepio:0004070 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen autosomal dominant de novo variant criteria"@en .
+
+sepio:0004071 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen autosomal dominant null variant criteria"@en .
+
+sepio:0004072 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen autosomal dominant other variant  criteria"@en .
+
+sepio:0004073 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen segregation criteria"@en .
+
+sepio:0004074 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen protein function criteria"@en .
+
+sepio:0004075 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen functional alteration evidence criteria"@en .
+
+sepio:0004076 a owl:NamedIndividual, skos:Concept ;
+    rdfs:label "ClinGen model and rescue evidence criteria"@en .
+
+
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi

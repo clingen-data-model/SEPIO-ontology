@@ -8,7 +8,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix geno: <http://purl.obolibrary.org/obo/GENO_> .
 @prefix iao: <http://purl.obolibrary.org/obo/IAO_> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
 @prefix faldo: <http://biohackathon.org/resource/faldo#> .
 @prefix so: <http://purl.obolibrary.org/obo/SO_> .
 @prefix mondo: <http://purl.obolibrary.org/obo/MONDO_> .
@@ -31,10 +31,16 @@ rdfs:label skos:inScheme cg:GeneValidityModel .
 sepio:0000055 skos:inScheme cg:GeneValidityModel . # realizes
 sepio:0004063 skos:inScheme cg:GeneValidityModel . # evidence score qualifier
 sepio:0000006 skos:inScheme cg:GeneValidityModel . # has evidence line
+sepio:0000084 skos:inScheme cg:GeneValidityModel . # has evidence item
 dc:source skos:inScheme cg:GeneValidityModel .
 dc:description skos:inScheme cg:GeneValidityModel .
 sepio:0000275 skos:inScheme cg:GeneValidityModel . # is about allele
 sepio:0000183 skos:inScheme cg:GeneValidityModel . # evidence direction
+dc:isVersionOf skos:inScheme cg:GeneValidityModel .
+bfo:0000055 skos:inScheme cg:GeneValidityModel . # realizes
+
+
+
 
 # classes (refer to dosage model for labels
 sepio:0004001 skos:inScheme cg:GeneValidityModel .
@@ -100,8 +106,21 @@ sepio:0004060 skos:inScheme cg:GeneValidityModel .
 sepio:0004061 skos:inScheme cg:GeneValidityModel .
 sepio:0004062 skos:inScheme cg:GeneValidityModel .
 sepio:0004064 skos:inScheme cg:GeneValidityModel .
+sepio:0004065 skos:inScheme cg:GeneValidityModel .
+sepio:0004066 skos:inScheme cg:GeneValidityModel .
+sepio:0004067 skos:inScheme cg:GeneValidityModel .
+sepio:0004068 skos:inScheme cg:GeneValidityModel .
+sepio:0004069 skos:inScheme cg:GeneValidityModel .
+sepio:0004070 skos:inScheme cg:GeneValidityModel .
+sepio:0004071 skos:inScheme cg:GeneValidityModel .
+sepio:0004072 skos:inScheme cg:GeneValidityModel .
+sepio:0004073 skos:inScheme cg:GeneValidityModel .
+sepio:0004074 skos:inScheme cg:GeneValidityModel .
+sepio:0004075 skos:inScheme cg:GeneValidityModel .
+sepio:0004076 skos:inScheme cg:GeneValidityModel .
 
 # value sets and members
+sepio:0000155 skos:inScheme cg:GeneValidityModel . # Approver role
 sepio:0004501 skos:inScheme cg:GeneValidityModel .
 ro:0004013 skos:inScheme cg:GeneValidityModel . # gene mutations causal for
 sepio:0004502 skos:inScheme cg:GeneValidityModel .
@@ -114,3 +133,82 @@ sepio:0004507 skos:inScheme cg:GeneValidityModel .
 sepio:0004508 skos:inScheme cg:GeneValidityModel .
 sepio:0004509 skos:inScheme cg:GeneValidityModel .
 sepio:0004510 skos:inScheme cg:GeneValidityModel .
+sepio:0000223 skos:inScheme cg:GeneValidityModel . # met
+sepio:0000226 skos:inScheme cg:GeneValidityModel . # not met
+sepio:0000347 skos:inScheme cg:GeneValidityModel . # criterion assessment outcome value set
+sepio:0000404 skos:inScheme cg:GeneValidityModel . # disputing
+sepio:0000405 skos:inScheme cg:GeneValidityModel . # inconclusive
+sepio:0000403 skos:inScheme cg:GeneValidityModel . # supporting
+
+cg:GeneValidityReportShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:targetClass sepio:0004004 ;
+    sh:class sepio:0004004 ;
+    sh:property [
+        sh:path bfo:0000051 ;
+        sh:name "Gene Dosage Assertions" ;
+        sh:minCount 1 ;
+        sh:node cg:GeneValidityAssertionShape 
+        ] .
+
+cg:GeneValidityAssertionShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004002 ;
+    sh:property [
+        sh:path sepio:0000388 ;
+        sh:minCount 1 ;
+        sh:node cg:GeneValidityPropositionShape
+        ] , [
+        sh:path sepio:0000389 ; # vs, has evidence level
+        sh:minCount 1 
+        ] , [
+        sh:path sepio:0000390 ; # Evidence level
+        sh:minCount 1 
+        ] , [
+        sh:path sepio:0000159 ; # Contribution
+        sh:minCount 1 ;
+        sh:node cg:GeneValidityContributionShape
+        ] , [
+        sh:path sepio:0004065 ; # evidence strength score
+        sh:minCount 1 ] , [
+        sh:name "GeneticEvidenceLine" ;
+        sh:path (sepio:0000006 rdf:class); # has evidence line
+        sh:minCount 1 ;
+        sh:in (sepio:0004005 sepio:0004006) 
+        # sh:in (sepio:0004000 sepio:0004001) 
+        ] .
+
+cg:GeneValidityContributionShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 
+        ]  , [
+        sh:path bfo:0000055 ; # Value set, approver role
+        sh:minCount 1
+        ] .
+        
+cg:GeneValidityPropositionShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004001 ;
+    sh:property [
+        sh:path sepio:0000388 ; # gene
+        sh:minCount 1 
+        ] , [
+        sh:path sepio:0000389 ; # value set, assertion predicate vs
+        sh:minCount 1 
+        ] , [
+        sh:path sepio:0000390 ; # disease
+        sh:minCount 1 
+        ] , [
+        sh:path sepio:0000144 ; # qualifier, MOI
+        sh:minCount 1 
+        ] .
+
+
+    
+    
