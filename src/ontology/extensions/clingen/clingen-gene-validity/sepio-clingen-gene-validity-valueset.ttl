@@ -81,7 +81,7 @@ sepio:0004502 a owl:NamedIndividual , sepio:0000412 ;
     rdfs:label "gene validity evidence level assertion predicate value set"@en .
 
 sepio:0000146 a owl:NamedIndividual , skos:Concept ; # has evidence level 
-    skos:inScheme sepio:0004501 .
+    skos:inScheme sepio:0004502 .
 
 # assertion descriptor (object?) valueset
 
@@ -91,31 +91,31 @@ sepio:0004503 a owl:NamedIndividual , sepio:0000412 ;
 
 sepio:0004504 a owl:NamedIndividual , skos:Concept ; 
     rdfs:label "definitive evidence" ;
-    skos:inScheme sepio:0004501 .
+    skos:inScheme sepio:0004503 .
 
 sepio:0004505 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "strong evidence" ;
-    skos:inScheme sepio:0004501 .
+    skos:inScheme sepio:0004503 .
 
 sepio:0004506 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "moderate evidence" ;
-    skos:inScheme sepio:0004501 .
+    skos:inScheme sepio:0004503 .
 
 sepio:0004507 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "limited evidence" ;
-    skos:inScheme sepio:0004501 .
+    skos:inScheme sepio:0004503 .
 
 sepio:0004508 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "no evidence" ;
-    skos:inScheme sepio:0004501 .
+    skos:inScheme sepio:0004503 .
 
 sepio:0004509 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "conflicting evidence" ;
-    skos:inScheme sepio:0004501 .
+    skos:inScheme sepio:0004503 .
 
 sepio:0004510 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "refuting evidence" ;
-    skos:inScheme sepio:0004501 .
+    skos:inScheme sepio:0004503 .
 
 
 # criterion assessment valueset (same as acmg sepio? met/not met)

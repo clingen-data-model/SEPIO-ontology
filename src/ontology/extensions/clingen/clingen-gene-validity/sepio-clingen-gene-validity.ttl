@@ -64,12 +64,6 @@ terms:source a owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://purl.obolibrary.org/obo/RO_0000091
-obo:RO_0000091 a owl:ObjectProperty ;
-               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" ;
-               rdfs:label "has disposition" .
-
-
 sepio:0004063 a owl:ObjectProperty ;
     obo:IAO_0000115 "Possibly obsolete?" ;
     rdfs:label "evidence score qualifier" .
@@ -85,13 +79,6 @@ sepio:0004065 a owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
-
-
-# # TODO identify appropriate superclass for actionability curation, maybe prov:activity
-# sepio:0003001 a owl:Class ;
-#                   rdfs:subClassOf prov:Activity ;
-#                   obo:IAO_0000115 "An actionability curation activity" ;
-#                   rdfs:label "Actionability Curation Activity"@en .
 
 
 sepio:0004001 a owl:Class ;
@@ -110,7 +97,7 @@ sepio:0004003 a owl:Class ;
     rdfs:label "gene validity evaluation guideline" .
     
 sepio:0004004 a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000003 ; # Occurant, might be more appropriate as continuant
+    rdfs:subClassOf obo:IAO_0000088 ; # Occurent, might be more appropriate as continuant
     obo:IAO_0000115 "A report containing a gene-disease validity evidence level assertion" ;
     rdfs:label "gene validity report" .
 
@@ -130,7 +117,7 @@ sepio:0004007 a owl:Class ;
 
 sepio:0004008 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "autosomal recessive case level evidence line"@en .
+    rdfs:label "autosomal recessive variant evidence line"@en .
 
 sepio:0004009 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
@@ -144,9 +131,27 @@ sepio:0004011 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
     rdfs:label "autosomal dominant other variant evidence line"@en .
 
+sepio:0004078 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "proband with autosomal dominant de novo variant evidence line"@en .
+
+sepio:0004079 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "proband with autosomal dominant null variant evidence line"@en .
+
+sepio:0004080 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "proband with autosomal dominant other variant evidence line"@en .
+
 sepio:0004012 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
+    obo:IAO_0000115 "Evidence line representing the aggregate of all segregation evidence relevant to a gene validity assertion."@en ;
     rdfs:label "segregation evidence line"@en .
+
+sepio:0004016 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    obo:IAO_0000115 "Evidence line representing a single segregation study in the context of a gene validity assertion."@en ;
+    rdfs:label "segregation study evidence line"@en .
     
 sepio:0004013 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
@@ -160,21 +165,17 @@ sepio:0004015 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
     rdfs:label "model and rescue evidence line"@en .
 
-sepio:0004016 a owl:Class ;
-    rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "model and rescue evidence line"@en .
-
 sepio:0004017 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "autosomal recessive de novo null variant evidence line"@en .
+    rdfs:label "proband with autosomal recessive de novo null variant evidence line"@en .
 
 sepio:0004018 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "autosomal recessive null variant evidence line"@en .
+    rdfs:label "proband with autosomal recessive null variant evidence line"@en .
 
 sepio:0004019 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "autosomal recessive other variant evidence line"@en .
+    rdfs:label "proband with autosomal recessive other variant evidence line"@en .
 
 sepio:0004020 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
@@ -230,29 +231,34 @@ sepio:0004032 a owl:Class ;
 
 ### Evidence Items ###
 
-sepio:0004033 a owl:Class ;
+sepio:0004081 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
-    rdfs:label "autosomal dominant de novo variant evidence item"@en .
+    rdfs:label "proband with variant evidence item"@en ;
+    obo:IAO_0000115 "Evidence item signifying a variant present in a proband presenting with a specific phenotype. Not to be instantiated directly, but exists as a superclass of more specific evidence items used in gene curation."@en .
+    
+sepio:0004033 a owl:Class ;
+    rdfs:subClassOf sepio:0004081 ;
+    rdfs:label "proband with de novo variant evidence item"@en .
 
 sepio:0004034 a owl:Class ;
-    rdfs:subClassOf sepio:0000149 ;
-    rdfs:label "autosomal dominant null variant evidence item"@en .
+    rdfs:subClassOf sepio:0004081 ;
+    rdfs:label "proband with null variant evidence item"@en .
 
 sepio:0004035 a owl:Class ;
-    rdfs:subClassOf sepio:0000149 ;
-    rdfs:label "autosomal dominant other variant evidence item"@en .
+    rdfs:subClassOf sepio:0004081 ;
+    rdfs:label "proband with other variant evidence item"@en .
 
 sepio:0004036 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
-    rdfs:label "clinical segregation evidence item"@en .
+    rdfs:label "segregation evidence item"@en .
 
 sepio:0004037 a owl:Class ;
-    rdfs:subClassOf sepio:0000149 ;
-    rdfs:label "autosomal recessive de novo variant evidence item"@en .
+    rdfs:subClassOf sepio:0004081 ;
+    rdfs:label "proband with two variants in trans evidence item"@en .
 
 sepio:0004038 a owl:Class ;
-    rdfs:subClassOf sepio:0000149 ;
-    rdfs:label "autosomal recessive other variant evidence item"@en .
+    rdfs:subClassOf sepio:0004081 ;
+    rdfs:label "proband with two variants at least one null evidence item"@en .
 
 sepio:0004039 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
@@ -322,7 +328,7 @@ sepio:0004054 a owl:Class ;
 
 sepio:0004055 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
-    rdfs:label "autosomal recessive case level criterion assessment"@en .
+    rdfs:label "autosomal recessive variant criterion assessment"@en .
 
 sepio:0004056 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
@@ -334,7 +340,7 @@ sepio:0004057 a owl:Class ;
 
 sepio:0004058 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
-    rdfs:label "autosomal dominant other variant  criterion assessment"@en .
+    rdfs:label "autosomal dominant other variant criterion assessment"@en .
 
 sepio:0004059 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
@@ -346,55 +352,63 @@ sepio:0004060 a owl:Class ;
 
 sepio:0004061 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
-    rdfs:label "functional alteration evidence criterion assessment"@en .
+    rdfs:label "functional alteration criterion assessment"@en .
 
 sepio:0004062 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
-    rdfs:label "model and rescue evidence criterion assessment"@en .
+    rdfs:label "model and rescue criterion assessment"@en .
     
 
-#################################################################
-#    Individuals
-#################################################################
-
 ###  http://purl.obolibrary.org/obo/SEPIO_0003000
-sepio:0004064 a owl:NamedIndividual , sepio:0002002 ;
-                  rdfs:label "ClinGen Gene Validity Evaluation Guideline"@en .
+sepio:0004064 a owl:Class , sepio:0002002 ;
+    rdfs:subClassOf sepio:0000037 ;
+    rdfs:label "ClinGen Gene Validity Evaluation Guideline"@en .
 
 
 ### Criteria for criterion assessments ###
 
-sepio:0004066 a owl:NamedIndividual, skos:Concept ;
+sepio:0004066 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen genetic evidence criteria"@en .
 
-sepio:0004067 a owl:NamedIndividual, skos:Concept ;
+sepio:0004067 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen experimental evidence criteria"@en .
 
-sepio:0004068 a owl:NamedIndividual, skos:Concept ;
+sepio:0004068 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen case control evidence criteria"@en .
 
-sepio:0004069 a owl:NamedIndividual, skos:Concept ;
-    rdfs:label "ClinGen autosomal recessive case level criteria"@en .
+sepio:0004069 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
+    rdfs:label "ClinGen autosomal recessive variant criteria"@en .
 
-sepio:0004070 a owl:NamedIndividual, skos:Concept ;
+sepio:0004070 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen autosomal dominant de novo variant criteria"@en .
 
-sepio:0004071 a owl:NamedIndividual, skos:Concept ;
+sepio:0004071 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen autosomal dominant null variant criteria"@en .
 
-sepio:0004072 a owl:NamedIndividual, skos:Concept ;
+sepio:0004072 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen autosomal dominant other variant  criteria"@en .
 
-sepio:0004073 a owl:NamedIndividual, skos:Concept ;
+sepio:0004073 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen segregation criteria"@en .
 
-sepio:0004074 a owl:NamedIndividual, skos:Concept ;
+sepio:0004074 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen protein function criteria"@en .
 
-sepio:0004075 a owl:NamedIndividual, skos:Concept ;
+sepio:0004075 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen functional alteration evidence criteria"@en .
 
-sepio:0004076 a owl:NamedIndividual, skos:Concept ;
+sepio:0004076 a owl:Class, skos:Concept ;
+    rdfs:subClassOf sepio:0000037 ;
     rdfs:label "ClinGen model and rescue evidence criteria"@en .
 
 
