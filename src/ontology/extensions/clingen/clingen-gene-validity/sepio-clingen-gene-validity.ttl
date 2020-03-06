@@ -76,10 +76,30 @@ sepio:0004065 a owl:DatatypeProperty ;
     obo:IAO_0000115 "quantitative score reflecting the strength of evidence supporting the assertion" ;
     rdfs:label "evidence strength score" .
 
+sepio:0004089 a owl:DatatypeProperty ;
+    obo:IAO_0000115 "The statistical probability that two genetic loci are likely to be inherited together. [ NCI ]" ;
+    rdfs:label "LOD Score" .
+
 #################################################################
 #    Classes
 #################################################################
 
+
+
+### provisional -- testing a concept
+sepio:0004082 a owl:Class ;
+    rdfs:subClassOf sepio:0000001 ;
+    rdfs:label "gene validity evidence line" ;
+    obo:IAO_0000115 "Evidence lines used to construct a gene validity evidence level assertion." ;
+    rdfs:comment "Not intended to be directly instantiated, but rather serve as the root for all other gene validity evidence lines." .
+
+sepio:0004083 a owl:Class ;
+    rdfs:subClassOf sepio:0004082 ;
+    rdfs:label "gene validity genetic evidence line" ;
+    obo:IAO_0000115 "" ;
+    rdfs:comment "Not intended to be directly instantiated, but rather serve as the root for all other gene validity evidence lines." .
+
+#### /provisional
 
 sepio:0004001 a owl:Class ;
     rdfs:subClassOf sepio:0000000 ;
@@ -97,7 +117,7 @@ sepio:0004003 a owl:Class ;
     rdfs:label "gene validity evaluation guideline" .
     
 sepio:0004004 a owl:Class ;
-    rdfs:subClassOf obo:IAO_0000088 ; # Occurent, might be more appropriate as continuant
+    rdfs:subClassOf obo:IAO_0000088 ; # subclass of IAO:report
     obo:IAO_0000115 "A report containing a gene-disease validity evidence level assertion" ;
     rdfs:label "gene validity report" .
 
@@ -146,12 +166,28 @@ sepio:0004080 a owl:Class ;
 sepio:0004012 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
     obo:IAO_0000115 "Evidence line representing the aggregate of all segregation evidence relevant to a gene validity assertion."@en ;
-    rdfs:label "segregation evidence line"@en .
+    rdfs:label "segregation evidence line"@en . 
 
 sepio:0004016 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
-    obo:IAO_0000115 "Evidence line representing a single segregation study in the context of a gene validity assertion."@en ;
-    rdfs:label "segregation study evidence line"@en .
+    obo:IAO_0000115 "Evidence line representing the aggregate of evidence across segregation studies on a gene-disease relationship where single-gene targed sequencing is used as the method to identify variants."@en ;
+    rdfs:label "single gene segregation evidence line"@en .
+
+sepio:0004084 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    obo:IAO_0000115 "Evidence line representing the aggregate of evidence across segregation studies on a gene-disease relationship where whole genome, exome, or multi-locus sequencing is used as the method to identify variants."@en ;
+    rdfs:label "multi-locus segregation evidence line"@en .
+
+sepio:0004090 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "family with single gene segregation evidence line"@en ;
+    obo:IAO_0000115 "Segregation evidence about a specific family in the context of a gene validity curation. Segregation was performed using single-gene analysis methods."@en .
+    
+sepio:0004091 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "family with multi-locus segregation evidence line"@en ;
+    obo:IAO_0000115 "Segregation evidence about a specific family in the context of a gene validity curation. Segregation was performed using multi-locus, whole exome, or genome analysis methods."@en .
+    
     
 sepio:0004013 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
@@ -239,7 +275,7 @@ sepio:0004081 a owl:Class ;
 sepio:0004033 a owl:Class ;
     rdfs:subClassOf sepio:0004081 ;
     rdfs:label "proband with de novo variant evidence item"@en .
-
+ 
 sepio:0004034 a owl:Class ;
     rdfs:subClassOf sepio:0004081 ;
     rdfs:label "proband with null variant evidence item"@en .
@@ -250,7 +286,18 @@ sepio:0004035 a owl:Class ;
 
 sepio:0004036 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
+    obo:IAO_0000115 "Describes evidence of phenotypic segregation by carriers of a particular genotype within a family." ;
     rdfs:label "segregation evidence item"@en .
+
+sepio:0004085 a owl:Class ;
+    rdfs:subClassOf sepio:0004036 ;
+    obo:IAO_0000115 "Carries segregation evidence for a family described in a study where the variant is discovered through targeted sequencing" ;
+    rdfs:label "single gene based segregation evidence item" .
+    
+sepio:0004086 a owl:Class ;
+    rdfs:subClassOf sepio:0004036 ; 
+    obo:IAO_0000115 "Carries segregation evidence for a family described in a study where the variant is discovered through targeted sequencing." ;
+    rdfs:label "multi locus based segregation evidence item" .
 
 sepio:0004037 a owl:Class ;
     rdfs:subClassOf sepio:0004081 ;
@@ -344,7 +391,18 @@ sepio:0004058 a owl:Class ;
 
 sepio:0004059 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;
+    obo:IAO_0000115 "Represents the judgement that valid genetic segregation evidence exists supporting a gene validity assertion" ;
     rdfs:label "segregation criterion assessment"@en .
+
+sepio:0004087 a owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    obo:IAO_0000115 "Represents the judgement that valid segregation evidence exists identified by targeted, single gene based methods." ;
+    rdfs:label "single gene segregation criterion assessment"@en .
+
+sepio:0004088 a owl:Class ;
+    rdfs:subClassOf sepio:0000191 ;
+    obo:IAO_0000115 "Represents the judgement that valid segregation evidence exists identified by multi-locus, whole exome or genome based methods." ;
+    rdfs:label "multi locus segregation criterion assessment"@en .
 
 sepio:0004060 a owl:Class ;
     rdfs:subClassOf sepio:0000191 ;

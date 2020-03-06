@@ -1,4 +1,3 @@
-# TODO review labels for terms, ensure consistent conventions used throughout document
 # TODO review value sets for properties; ensure validation
 # TODO shapes for AR, create AR example
 # TODO shapes for case-control, case-control example
@@ -45,9 +44,6 @@ sepio:0000183 skos:inScheme cg:GeneValidityModel . # evidence direction
 dc:isVersionOf skos:inScheme cg:GeneValidityModel .
 bfo:0000055 skos:inScheme cg:GeneValidityModel . # realizes
 sepio:0000429 skos:inScheme cg:GeneValidityModel . # evidence line strength score
-
-
-
 
 
 # classes (refer to dosage model for labels
@@ -129,6 +125,18 @@ sepio:0004076 skos:inScheme cg:GeneValidityModel .
 sepio:0004078 skos:inScheme cg:GeneValidityModel .
 sepio:0004079 skos:inScheme cg:GeneValidityModel .
 sepio:0004080 skos:inScheme cg:GeneValidityModel .
+sepio:0004081 skos:inScheme cg:GeneValidityModel .
+sepio:0004082 skos:inScheme cg:GeneValidityModel .
+sepio:0004083 skos:inScheme cg:GeneValidityModel .
+sepio:0004084 skos:inScheme cg:GeneValidityModel .
+sepio:0004085 skos:inScheme cg:GeneValidityModel .
+sepio:0004086 skos:inScheme cg:GeneValidityModel .
+sepio:0004087 skos:inScheme cg:GeneValidityModel .
+sepio:0004088 skos:inScheme cg:GeneValidityModel .
+sepio:0004089 skos:inScheme cg:GeneValidityModel .
+sepio:0004090 skos:inScheme cg:GeneValidityModel .
+sepio:0004091 skos:inScheme cg:GeneValidityModel .
+sepio:0000247 skos:inScheme cg:GeneValidityModel . # family cosegregation statement
 
 
 # value sets and members
@@ -382,8 +390,126 @@ cg:SegregationEvidenceLineShape
     sh:property [
         sh:path sepio:0000084 ;
         sh:minCount 1 ;
-        sh:class sepio:0004036 ;
+        sh:class sepio:0004059 ;
         ] .
+
+cg:SegregationCriterionAssessmentShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004059 ;
+    sh:targetClass sepio:0004059 ;
+    sh:property [
+        sh:path sepio:0000388 ;
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000390 ;
+        sh:minCount 1 ;
+        ] , [
+        sh:path (sepio:0000006 rdf:type) ;
+        sh:minCount 1 ;
+        sh:in (sepio:0004016 sepio:0004090)
+        ] .
+
+cg:SingleGeneSegregationEvidenceLineShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004016 ;
+    sh:targetClass sepio:0004016 ;
+    sh:property [
+        sh:path sepio:0000429 ; # Evidence line strength score
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000084 ;
+        sh:minCount 1 ;
+        sh:type sepio:0004087
+        ] .
+
+cg:MultiLocusSegregationEvidenceLineShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004084 ;
+    sh:targetClass sepio:0004084 ;
+    sh:property [
+        sh:path sepio:0000429 ; # Evidence line strength score
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000084 ;
+        sh:minCount 1 ;
+        sh:type sepio:0004088
+        ] .
+
+cg:SingleGeneSegregationCriterionAssessmentShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004087 ;
+    sh:targetClass sepio:0004087 ;
+    sh:property [
+        sh:path sepio:0000388 ;
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000390 ;
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000006 ;
+        sh:minCount 1 ;
+        sh:class sepio:0004090 ;
+        ] .
+
+cg:MultiLocusSegregationCriterionAssessmentShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004088 ;
+    sh:targetClass sepio:0004088 ;
+    sh:property [
+        sh:path sepio:0000388 ;
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000390 ;
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000006 ;
+        sh:minCount 1 ;
+        sh:class sepio:0004091 ;
+        ] .
+
+cg:FamilyWithSingleGeneSegregationEvidenceLineShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004090 ;
+    sh:targetClass sepio:0004090 ;
+    sh:property [
+        sh:path sepio:0000429 ; # Evidence line strength score
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000084 ;
+        sh:minCount 1 ;
+        sh:class sepio:0000247
+        ] .
+
+cg:FamilyWithSingleGeneSegregationEvidenceLineShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:class sepio:0004090 ;
+    sh:targetClass sepio:0004090 ;
+    sh:property [
+        sh:path sepio:0000429 ; # Evidence line strength score
+        sh:minCount 1 ;
+        ] , [
+        sh:path sepio:0000084 ;
+        sh:minCount 1 ;
+        sh:class sepio:0000247
+        ] .
+
+cg:FamilyCoSegregationEvidenceItemShape
+    a sh:NodeShape ;
+    skos:inScheme cg:GeneValidityModel ;
+    sh:property [
+        sh:path sepio:0004089 ;
+        sh:minCount 1 ;
+        ] .
+
+
+
 
 #### TODO, complete for AR, case control, variant info
 
