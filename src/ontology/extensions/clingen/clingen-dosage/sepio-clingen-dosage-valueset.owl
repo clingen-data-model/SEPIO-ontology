@@ -153,8 +153,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002006">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:label xml:lang="en">sufficient evidence</rdfs:label>
         <obo:SEPIO_0002506 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</obo:SEPIO_0002506>
+        <rdfs:label xml:lang="en">sufficient evidence</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
     </owl:NamedIndividual>
     
@@ -165,7 +165,7 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002007">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <obo:SEPIO_0002506 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</obo:SEPIO_0002506>
-        <rdfs:label xml:lang="en">minimal evidence</rdfs:label>
+        <rdfs:label xml:lang="en">little evidence</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
     </owl:NamedIndividual>
     
@@ -175,8 +175,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002008">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:label xml:lang="en">no evidence</rdfs:label>
         <obo:SEPIO_0002506 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</obo:SEPIO_0002506>
+        <rdfs:label xml:lang="en">no evidence</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
     </owl:NamedIndividual>
     
@@ -187,7 +187,7 @@
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002009">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <obo:SEPIO_0002506 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</obo:SEPIO_0002506>
-        <rdfs:label xml:lang="en">moderate evidence</rdfs:label>
+        <rdfs:label xml:lang="en">emerging evidence</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
     </owl:NamedIndividual>
     
@@ -254,8 +254,8 @@
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002505">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:label xml:lang="en">is out of scope</rdfs:label>
         <obo:SEPIO_0002506 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</obo:SEPIO_0002506>
+        <rdfs:label xml:lang="en">is out of scope</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002503"/>
     </owl:NamedIndividual>
     

@@ -258,6 +258,48 @@ obo:SEPIO_0003533 rdf:type owl:NamedIndividual ,
                   rdfs:label "high risk/poor acceptable/ intensive or no intervention" ;
                   skos:inScheme obo:SEPIO_0003529 .
 
+##### New actionability assertion types
+
+obo:SEPIO_0003534 rdf:type owl:NamedIndividual ,
+        obo:SEPIO_0000412 ;
+    rdfs:label "Actionability Assertion Value Set" .
+
+obo:SEPIO_0003535 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Definitive Actionability" ;
+                  skos:inScheme obo:SEPIO_0003534 .
+
+obo:SEPIO_0003536 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Strong Actionability" ;
+                  skos:inScheme obo:SEPIO_0003534 .
+
+obo:SEPIO_0003537 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Moderate Actionability" ;
+                  skos:inScheme obo:SEPIO_0003534 .
+
+obo:SEPIO_0003538 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Limited Actionability" ;
+                  skos:inScheme obo:SEPIO_0003534 .
+
+obo:SEPIO_0003539 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Insufficient Actionability" ;
+                  skos:inScheme obo:SEPIO_0003534 .
+
+obo:SEPIO_0003540 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "No Actionability" ;
+                  skos:inScheme obo:SEPIO_0003534 .
+
+obo:SEPIO_0003531 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Assertion Pending" ;
+                  skos:inScheme obo:SEPIO_0003534 .
+
+
 
 #################################################################
 #    Annotations

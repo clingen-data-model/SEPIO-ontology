@@ -65,6 +65,10 @@ obo:RO_0000091 rdf:type owl:ObjectProperty ;
                obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence" ;
                rdfs:label "has disposition" .
 
+obo:SEPIO_0003012 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000115 "Variants in the subject gene are actionable in the context of target condition" ;
+               rdfs:label "gene is actionable for condition" .
+
 
 #################################################################
 #    Classes
@@ -121,6 +125,16 @@ obo:SEPIO_0003010 rdf:type owl:Class ;
                   rdfs:subClassOf obo:IAO_0000088 ;
                   obo:IAO_0000115 "A report regarding the clinical actionability of a related set of genetic conditions" ;
                   rdfs:label "Actionability Report"@en .
+
+obo:SEPIO_0003011 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:SEPIO_0000000 ;
+                  obo:IAO_0000115 "The proposition that a gene is actionable in the context of a condition" ;
+                  rdfs:label "Genetic Condition Actionability Proposition"@en .
+
+obo:SEPIO_0003013 rdf:type owl:Class ;
+                  rdfs:subClassOf obo:SEPIO_0000001 ;
+                  obo:IAO_0000115 "The assertion that a given actionability proposition carries a specific evidence level" ;
+                  rdfs:label "Genetic Condition Actionability Evidence Level Assertion"@en .
 
 
 #################################################################
