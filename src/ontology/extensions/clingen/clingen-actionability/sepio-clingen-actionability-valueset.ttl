@@ -294,7 +294,7 @@ obo:SEPIO_0003540 rdf:type owl:NamedIndividual ,
                   rdfs:label "No Actionability" ;
                   skos:inScheme obo:SEPIO_0003534 .
 
-obo:SEPIO_0003531 rdf:type owl:NamedIndividual ,
+obo:SEPIO_0003541 rdf:type owl:NamedIndividual ,
                            skos:Concept ;
                   rdfs:label "Assertion Pending" ;
                   skos:inScheme obo:SEPIO_0003534 .
