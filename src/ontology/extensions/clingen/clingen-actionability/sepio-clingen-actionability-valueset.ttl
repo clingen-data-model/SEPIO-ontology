@@ -286,7 +286,7 @@ obo:SEPIO_0003538 rdf:type owl:NamedIndividual ,
 
 obo:SEPIO_0003539 rdf:type owl:NamedIndividual ,
                            skos:Concept ;
-                  rdfs:label "Insufficient Actionability" ;
+                  rdfs:label "Has Insufficient Evidence for Actionability Based on Early Rule-out" ;
                   skos:inScheme obo:SEPIO_0003534 .
 
 obo:SEPIO_0003540 rdf:type owl:NamedIndividual ,
@@ -299,6 +299,10 @@ obo:SEPIO_0003541 rdf:type owl:NamedIndividual ,
                   rdfs:label "Assertion Pending" ;
                   skos:inScheme obo:SEPIO_0003534 .
 
+obo:SEPIO_0003542 rdf:type owl:NamedIndividual ,
+                           skos:Concept ;
+                  rdfs:label "Has Insufficient Evidence for Actionability Based on Expert Review" ;
+                  skos:inScheme obo:SEPIO_0003534 .
 
 
 #################################################################
