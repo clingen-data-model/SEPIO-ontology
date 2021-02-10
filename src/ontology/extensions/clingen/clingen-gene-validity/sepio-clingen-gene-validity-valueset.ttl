@@ -88,33 +88,40 @@ sepio:0000146 a owl:NamedIndividual , skos:Concept ; # has evidence level
 sepio:0004503 a owl:NamedIndividual , sepio:0000412 ;
     iao:0000115 "A value set of appropriate terms for the target of a gene validity evidence level proposition."@en ;
     rdfs:label "gene validity evidence level value set"@en .
-
+# http://purl.obolibrary.org/obo/SEPIO_0002506    
 sepio:0004504 a owl:NamedIndividual , skos:Concept ; 
     rdfs:label "definitive evidence" ;
+    sepio:0002506 6 ;
     skos:inScheme sepio:0004503 .
 
 sepio:0004505 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "strong evidence" ;
+    sepio:0002506 5 ;
     skos:inScheme sepio:0004503 .
 
 sepio:0004506 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "moderate evidence" ;
+    sepio:0002506 4 ;
     skos:inScheme sepio:0004503 .
 
 sepio:0004507 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "limited evidence" ;
+    sepio:0002506 3 ;
     skos:inScheme sepio:0004503 .
 
 sepio:0004508 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "no known disease relationship" ;
+    sepio:0002506 0 ;
     skos:inScheme sepio:0004503 .
 
 sepio:0004509 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "conflicting evidence" ;
+    sepio:0002506 2 ;
     skos:inScheme sepio:0004503 .
 
 sepio:0004510 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "refuting evidence" ;
+    sepio:0002506 1 ;
     skos:inScheme sepio:0004503 .
 
 
