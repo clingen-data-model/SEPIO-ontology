@@ -140,7 +140,6 @@ cg:GeneDosageShape
         sh:path geno:0000917 ; # has_member_count
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype xsd:integer ;
         ] ;
    sh:property [
        sh:path geno:0000903 ; # geno/has-location ;    
