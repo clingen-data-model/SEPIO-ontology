@@ -179,8 +179,16 @@
         <rdfs:label xml:lang="en">no evidence</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
     </owl:NamedIndividual>
-    
 
+
+    <!-- TODO -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/SEPIO_0002507">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <obo:SEPIO_0002506 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</obo:SEPIO_0002506>
+        <rdfs:label xml:lang="en">refuting evidence</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0002005"/>
+    </owl:NamedIndividual>
 
     <!-- http://purl.obolibrary.org/obo/SEPIO_0002009 -->
 
