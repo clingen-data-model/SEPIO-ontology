@@ -72,549 +72,549 @@ cg:GeneValidityAssertionShape
     #     ]
     .
 
-cg:GeneValidityContributionShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:property [
-        sh:path rdfs:label ;
-        sh:minCount 1 
-        ]  , [
-        sh:path bfo:0000055 ; # Value set, approver role
-        sh:minCount 1
-        ] .
+# cg:GeneValidityContributionShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:property [
+#         sh:path rdfs:label ;
+#         sh:minCount 1 
+#         ]  , [
+#         sh:path bfo:0000055 ; # Value set, approver role
+#         sh:minCount 1
+#         ] .
         
-cg:GeneValidityPropositionShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004001 ;
-    sh:property [
-        sh:path sepio:0000388 ; # gene
-        sh:minCount 1 
-        ] , [
-        sh:path (sepio:0000389 skos:inScheme) ; # value set, assertion predicate vs
-        sh:minCount 1 ;
-        sh:hasValue sepio:0004501
-        ] , [
-        sh:path sepio:0000390 ; # disease
-        sh:minCount 1 
-        ] , [
-        sh:path sepio:0000144 ; # qualifier, MOI
-        sh:minCount 1 
-        ] .
+# cg:GeneValidityPropositionShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004001 ;
+#     sh:property [
+#         sh:path sepio:0000388 ; # gene
+#         sh:minCount 1 
+#         ] , [
+#         sh:path (sepio:0000389 skos:inScheme) ; # value set, assertion predicate vs
+#         sh:minCount 1 ;
+#         sh:hasValue sepio:0004501
+#         ] , [
+#         sh:path sepio:0000390 ; # disease
+#         sh:minCount 1 
+#         ] , [
+#         sh:path sepio:0000144 ; # qualifier, MOI
+#         sh:minCount 1 
+#         ] .
 
 
-### Genetic evidence shapes
+# ### Genetic evidence shapes
 
-cg:GeneValidityGeneticEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004005 ;
-    sh:targetClass sepio:0004005 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004052 # Genetic Evidence Criterion Assessment
-        ] .
+# cg:GeneValidityGeneticEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004005 ;
+#     sh:targetClass sepio:0004005 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004052 # Genetic Evidence Criterion Assessment
+#         ] .
     
-cg:GeneValidityGeneticEvidenceCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004052 ;
-    sh:targetClass sepio:0004052 ;
-    sh:property [
-        sh:path (sepio:0000006 rdf:type); # has evidence line
-        sh:minCount 1 ;
-        sh:in (sepio:0004009 sepio:0004010 sepio:0004011 sepio:0004007 sepio:0004008 sepio:0004012)
-        ] .    
+# cg:GeneValidityGeneticEvidenceCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004052 ;
+#     sh:targetClass sepio:0004052 ;
+#     sh:property [
+#         sh:path (sepio:0000006 rdf:type); # has evidence line
+#         sh:minCount 1 ;
+#         sh:in (sepio:0004009 sepio:0004010 sepio:0004011 sepio:0004007 sepio:0004008 sepio:0004012)
+#         ] .    
 
-cg:GeneValidityGeneticEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004005 ;
-    sh:targetClass sepio:0004005 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004052 # Genetic Evidence Criterion Assessment
-        ] .
+# cg:GeneValidityGeneticEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004005 ;
+#     sh:targetClass sepio:0004005 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004052 # Genetic Evidence Criterion Assessment
+#         ] .
 
-cg:AutosomalDominantOtherVariantEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004011 ;
-    sh:targetClass sepio:0004011 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004058 # AD other criterion assessment
-        ] .
+# cg:AutosomalDominantOtherVariantEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004011 ;
+#     sh:targetClass sepio:0004011 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004058 # AD other criterion assessment
+#         ] .
         
-cg:AutosomalDominantOtherVariantEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004011 ;
-    sh:targetClass sepio:0004011 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004058 # AD other criterion assessment
-        ] .
+# cg:AutosomalDominantOtherVariantEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004011 ;
+#     sh:targetClass sepio:0004011 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004058 # AD other criterion assessment
+#         ] .
 
-cg:AutosomalDominantNullVariantEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004010 ;
-    sh:targetClass sepio:0004010 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004057 # AD other criterion assessment
-        ] .
+# cg:AutosomalDominantNullVariantEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004010 ;
+#     sh:targetClass sepio:0004010 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004057 # AD other criterion assessment
+#         ] .
 
-cg:AutosomalDominantDeNovoVariantEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004009 ;
-    sh:targetClass sepio:0004009 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004056 # AD other criterion assessment
-        ] .
+# cg:AutosomalDominantDeNovoVariantEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004009 ;
+#     sh:targetClass sepio:0004009 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004056 # AD other criterion assessment
+#         ] .
 
-cg:AutosomalDominantDeNovoVariantCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004056 ;
-    sh:targetClass sepio:0004056 ;
-    sh:property [
-        sh:path sepio:0000006 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004078 
-        ] .
+# cg:AutosomalDominantDeNovoVariantCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004056 ;
+#     sh:targetClass sepio:0004056 ;
+#     sh:property [
+#         sh:path sepio:0000006 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004078 
+#         ] .
 
-cg:AutosomalDominantNullVariantCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004057 ;
-    sh:targetClass sepio:0004057 ;
-    sh:property [
-        sh:path sepio:0000006 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004079
-        ] .
+# cg:AutosomalDominantNullVariantCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004057 ;
+#     sh:targetClass sepio:0004057 ;
+#     sh:property [
+#         sh:path sepio:0000006 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004079
+#         ] .
 
-cg:AutosomalDominantOtherVariantCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004058 ;
-    sh:targetClass sepio:0004058 ;
-    sh:property [
-        sh:path sepio:0000006 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004080
-        ] .
-
-
-cg:ProbandWithAutosomalDominantDeNovoVariantEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004078 ;
-    sh:targetClass sepio:0004078 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004033
-        ] .
-
-cg:ProbandWithAutosomalDominantNullVariantEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004079 ;
-    sh:targetClass sepio:0004079 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004034
-        ] .
-
-cg:ProbandWithAutosomalDominantOtherVariantEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004080 ;
-    sh:targetClass sepio:0004080 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004035
-        ] .
+# cg:AutosomalDominantOtherVariantCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004058 ;
+#     sh:targetClass sepio:0004058 ;
+#     sh:property [
+#         sh:path sepio:0000006 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004080
+#         ] .
 
 
-### Segregation evidence shapes
+# cg:ProbandWithAutosomalDominantDeNovoVariantEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004078 ;
+#     sh:targetClass sepio:0004078 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004033
+#         ] .
 
-cg:SegregationEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004012 ;
-    sh:targetClass sepio:0004012 ;
-    sh:property [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:class sepio:0004059 ;
-        ] .
+# cg:ProbandWithAutosomalDominantNullVariantEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004079 ;
+#     sh:targetClass sepio:0004079 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004034
+#         ] .
 
-cg:SegregationCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004059 ;
-    sh:targetClass sepio:0004059 ;
-    sh:property [
-        sh:path sepio:0000388 ;
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000390 ;
-        sh:minCount 1 ;
-        ] , [
-        sh:path (sepio:0000006 rdf:type) ;
-        sh:minCount 1 ;
-        sh:in (sepio:0004016 sepio:0004090)
-        ] .
-
-cg:SingleGeneSegregationEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004016 ;
-    sh:targetClass sepio:0004016 ;
-    sh:property [
-        sh:path sepio:0000429 ; # Evidence line strength score
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:type sepio:0004087
-        ] .
-
-cg:MultiLocusSegregationEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004084 ;
-    sh:targetClass sepio:0004084 ;
-    sh:property [
-        sh:path sepio:0000429 ; # Evidence line strength score
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:type sepio:0004088
-        ] .
-
-cg:SingleGeneSegregationCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004087 ;
-    sh:targetClass sepio:0004087 ;
-    sh:property [
-        sh:path sepio:0000388 ;
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000390 ;
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000006 ;
-        sh:minCount 1 ;
-        sh:class sepio:0004090 ;
-        ] .
-
-cg:MultiLocusSegregationCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004088 ;
-    sh:targetClass sepio:0004088 ;
-    sh:property [
-        sh:path sepio:0000388 ;
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000390 ;
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000006 ;
-        sh:minCount 1 ;
-        sh:class sepio:0004091 ;
-        ] .
-
-cg:FamilyWithSingleGeneSegregationEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004090 ;
-    sh:targetClass sepio:0004090 ;
-    sh:property [
-        sh:path sepio:0000429 ; # Evidence line strength score
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:class sepio:0000247
-        ] .
-
-cg:FamilyWithSingleGeneSegregationEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004090 ;
-    sh:targetClass sepio:0004090 ;
-    sh:property [
-        sh:path sepio:0000429 ; # Evidence line strength score
-        sh:minCount 1 ;
-        ] , [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:class sepio:0000247
-        ] .
-
-cg:FamilyCoSegregationEvidenceItemShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:property [
-        sh:path sepio:0004089 ;
-        sh:minCount 1 ;
-        ] .
+# cg:ProbandWithAutosomalDominantOtherVariantEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004080 ;
+#     sh:targetClass sepio:0004080 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004035
+#         ] .
 
 
+# ### Segregation evidence shapes
+
+# cg:SegregationEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004012 ;
+#     sh:targetClass sepio:0004012 ;
+#     sh:property [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0004059 ;
+#         ] .
+
+# cg:SegregationCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004059 ;
+#     sh:targetClass sepio:0004059 ;
+#     sh:property [
+#         sh:path sepio:0000388 ;
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000390 ;
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path (sepio:0000006 rdf:type) ;
+#         sh:minCount 1 ;
+#         sh:in (sepio:0004016 sepio:0004090)
+#         ] .
+
+# cg:SingleGeneSegregationEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004016 ;
+#     sh:targetClass sepio:0004016 ;
+#     sh:property [
+#         sh:path sepio:0000429 ; # Evidence line strength score
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:type sepio:0004087
+#         ] .
+
+# cg:MultiLocusSegregationEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004084 ;
+#     sh:targetClass sepio:0004084 ;
+#     sh:property [
+#         sh:path sepio:0000429 ; # Evidence line strength score
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:type sepio:0004088
+#         ] .
+
+# cg:SingleGeneSegregationCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004087 ;
+#     sh:targetClass sepio:0004087 ;
+#     sh:property [
+#         sh:path sepio:0000388 ;
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000390 ;
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000006 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0004090 ;
+#         ] .
+
+# cg:MultiLocusSegregationCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004088 ;
+#     sh:targetClass sepio:0004088 ;
+#     sh:property [
+#         sh:path sepio:0000388 ;
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000390 ;
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000006 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0004091 ;
+#         ] .
+
+# cg:FamilyWithSingleGeneSegregationEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004090 ;
+#     sh:targetClass sepio:0004090 ;
+#     sh:property [
+#         sh:path sepio:0000429 ; # Evidence line strength score
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0000247
+#         ] .
+
+# cg:FamilyWithSingleGeneSegregationEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004090 ;
+#     sh:targetClass sepio:0004090 ;
+#     sh:property [
+#         sh:path sepio:0000429 ; # Evidence line strength score
+#         sh:minCount 1 ;
+#         ] , [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0000247
+#         ] .
+
+# cg:FamilyCoSegregationEvidenceItemShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:property [
+#         sh:path sepio:0004089 ;
+#         sh:minCount 1 ;
+#         ] .
 
 
-#### TODO, complete for AR, case control, variant info
 
-cg:ExperimentalEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004006 ;
-    sh:targetClass sepio:0004006 ;
-    sh:property [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:class sepio:0004053
-        ] .
 
-cg:ExperimentalEvidenceCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004053 ;
-    sh:targetClass sepio:0004053 ;
-    sh:property [
-        sh:path (sepio:0000006 rdf:type) ;
-        sh:minCount 1 ;
-        sh:in (sepio:0004013 sepio:0004014 sepio:0004015)
-        ] .
+# #### TODO, complete for AR, case control, variant info
 
-cg:FunctionalEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004013 ;
-    sh:targetClass sepio:0004013 ;
-    sh:property [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:class sepio:0004060
-        ] .
+# cg:ExperimentalEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004006 ;
+#     sh:targetClass sepio:0004006 ;
+#     sh:property [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0004053
+#         ] .
+
+# cg:ExperimentalEvidenceCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004053 ;
+#     sh:targetClass sepio:0004053 ;
+#     sh:property [
+#         sh:path (sepio:0000006 rdf:type) ;
+#         sh:minCount 1 ;
+#         sh:in (sepio:0004013 sepio:0004014 sepio:0004015)
+#         ] .
+
+# cg:FunctionalEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004013 ;
+#     sh:targetClass sepio:0004013 ;
+#     sh:property [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0004060
+#         ] .
     
-cg:FunctionalAlterationEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004014 ;
-    sh:targetClass sepio:0004014 ;
-    sh:property [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:class sepio:0004061
-        ] .
+# cg:FunctionalAlterationEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004014 ;
+#     sh:targetClass sepio:0004014 ;
+#     sh:property [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0004061
+#         ] .
 
-cg:ModelAndRescueEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004015 ;
-    sh:targetClass sepio:0004015 ;
-    sh:property [
-        sh:path sepio:0000084 ;
-        sh:minCount 1 ;
-        sh:class sepio:0004062
-        ] .
+# cg:ModelAndRescueEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004015 ;
+#     sh:targetClass sepio:0004015 ;
+#     sh:property [
+#         sh:path sepio:0000084 ;
+#         sh:minCount 1 ;
+#         sh:class sepio:0004062
+#         ] .
 
-cg:ProteinFunctionCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004060 ;
-    sh:targetClass sepio:0004060 ;
-    sh:property [
-        sh:path (sepio:0000006 rdf:type);
-        sh:minCount 1 ;
-        sh:in (sepio:0004022 sepio:0004023 sepio:0004024)
-        ] .
+# cg:ProteinFunctionCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004060 ;
+#     sh:targetClass sepio:0004060 ;
+#     sh:property [
+#         sh:path (sepio:0000006 rdf:type);
+#         sh:minCount 1 ;
+#         sh:in (sepio:0004022 sepio:0004023 sepio:0004024)
+#         ] .
 
-cg:FunctionalAlterationCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004061 ;
-    sh:targetClass sepio:0004061 ;
-    sh:property [
-        sh:path (sepio:0000006 rdf:type) ;
-        sh:minCount 1 ;
-        sh:in (sepio:0004025 sepio:0004026)
-        ] .
+# cg:FunctionalAlterationCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004061 ;
+#     sh:targetClass sepio:0004061 ;
+#     sh:property [
+#         sh:path (sepio:0000006 rdf:type) ;
+#         sh:minCount 1 ;
+#         sh:in (sepio:0004025 sepio:0004026)
+#         ] .
 
-cg:ModelAndRescueCriterionAssessmentShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004062 ;
-    sh:targetClass sepio:0004062 ;
-    sh:property [
-        sh:path (sepio:0000006 rdf:type) ;
-        sh:minCount 1 ;
-        sh:in (sepio:0004027 sepio:0004028 sepio:0004029 sepio:0004030 sepio:0004031 sepio:0004032)
-        ] .        
+# cg:ModelAndRescueCriterionAssessmentShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004062 ;
+#     sh:targetClass sepio:0004062 ;
+#     sh:property [
+#         sh:path (sepio:0000006 rdf:type) ;
+#         sh:minCount 1 ;
+#         sh:in (sepio:0004027 sepio:0004028 sepio:0004029 sepio:0004030 sepio:0004031 sepio:0004032)
+#         ] .        
 
-### Leaf node evidence lines for experimental evidence
+# ### Leaf node evidence lines for experimental evidence
 
-cg:BiochemicalFunctionEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004022 ;
-    sh:targetClass sepio:0004022 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004041
-        ] .
+# cg:BiochemicalFunctionEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004022 ;
+#     sh:targetClass sepio:0004022 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004041
+#         ] .
 
-cg:ProteinInteractionEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004023 ;
-    sh:targetClass sepio:0004023 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004042
-        ] .
+# cg:ProteinInteractionEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004023 ;
+#     sh:targetClass sepio:0004023 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004042
+#         ] .
 
-cg:GeneExpressionEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004024 ;
-    sh:targetClass sepio:0004024 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004043
-        ] .
+# cg:GeneExpressionEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004024 ;
+#     sh:targetClass sepio:0004024 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004043
+#         ] .
 
-cg:FunctionalAlterationPatientCellsEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004025 ;
-    sh:targetClass sepio:0004025 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004044
-        ] .
+# cg:FunctionalAlterationPatientCellsEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004025 ;
+#     sh:targetClass sepio:0004025 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004044
+#         ] .
 
-cg:FunctionalAlterationNonPatientCellsEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004026 ;
-    sh:targetClass sepio:0004026 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004045
-        ] .
+# cg:FunctionalAlterationNonPatientCellsEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004026 ;
+#     sh:targetClass sepio:0004026 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004045
+#         ] .
 
-cg:NonHumanModelEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004027 ;
-    sh:targetClass sepio:0004027 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004046
-        ] .
+# cg:NonHumanModelEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004027 ;
+#     sh:targetClass sepio:0004027 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004046
+#         ] .
 
-cg:CellCultureModelEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004028 ;
-    sh:targetClass sepio:0004028 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004047
-        ] .
+# cg:CellCultureModelEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004028 ;
+#     sh:targetClass sepio:0004028 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004047
+#         ] .
 
-cg:RescueInHumanEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004029 ;
-    sh:targetClass sepio:0004029 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004048
-        ] .
+# cg:RescueInHumanEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004029 ;
+#     sh:targetClass sepio:0004029 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004048
+#         ] .
 
-cg:NonHumanModelRescueEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004030 ;
-    sh:targetClass sepio:0004030 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004049
-        ] .
+# cg:NonHumanModelRescueEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004030 ;
+#     sh:targetClass sepio:0004030 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004049
+#         ] .
 
-cg:RescueInCellCultureEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004031 ;
-    sh:targetClass sepio:0004031 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004050
-        ] .
+# cg:RescueInCellCultureEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004031 ;
+#     sh:targetClass sepio:0004031 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004050
+#         ] .
 
-cg:RescueInPateintCellsEvidenceLineShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004032 ;
-    sh:targetClass sepio:0004032 ;
-    sh:property [
-        sh:path sepio:0000084 ; # has evidence item
-        sh:minCount 1 ;
-        sh:class sepio:0004051
-        ] .
+# cg:RescueInPateintCellsEvidenceLineShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004032 ;
+#     sh:targetClass sepio:0004032 ;
+#     sh:property [
+#         sh:path sepio:0000084 ; # has evidence item
+#         sh:minCount 1 ;
+#         sh:class sepio:0004051
+#         ] .
 
 
-##### General shapes
-cg:ProbandWithVariantEvidenceItemShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0004081 ;
-    sh:targetClass sepio:0004081 ;
-    sh:property [
-        sh:path sepio:0000275 ;
-        sh:minCount 1 
-        ] .
+# ##### General shapes
+# cg:ProbandWithVariantEvidenceItemShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0004081 ;
+#     sh:targetClass sepio:0004081 ;
+#     sh:property [
+#         sh:path sepio:0000275 ;
+#         sh:minCount 1 
+#         ] .
     
-cg:EvidenceItemShape
-    a sh:NodeShape ;
-    skos:inScheme cg:GeneValidityModel ;
-    sh:class sepio:0000149 ;
-    sh:targetClass sepio:0000149 ;
-    sh:property [
-        sh:path dc:source ;
-        sh:minCount 1 
-        ] .
+# cg:EvidenceItemShape
+#     a sh:NodeShape ;
+#     skos:inScheme cg:GeneValidityModel ;
+#     sh:class sepio:0000149 ;
+#     sh:targetClass sepio:0000149 ;
+#     sh:property [
+#         sh:path dc:source ;
+#         sh:minCount 1 
+#         ] .
         
         
         

@@ -123,6 +123,15 @@ sepio:0004004 a owl:Class ;
 
 ### Evidence Lines ###
 
+### Evidence Lines -- Superclasses ###
+
+sepio:0004097 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    obo:IAO_0000115 "Evidence line assessing the evidence provided by a single proband." ;
+    rdfs:label "proband evidence line"@en .
+
+### Evidence Lines -- Instantiatable ###
+
 sepio:0004005 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
     rdfs:label "genetic evidence line"@en .
@@ -152,16 +161,28 @@ sepio:0004011 a owl:Class ;
     rdfs:label "autosomal dominant other variant evidence line"@en .
 
 sepio:0004078 a owl:Class ;
-    rdfs:subClassOf sepio:0000002 ;
+    rdfs:subClassOf sepio:0004097 ;
     rdfs:label "proband with autosomal dominant de novo variant evidence line"@en .
 
 sepio:0004079 a owl:Class ;
-    rdfs:subClassOf sepio:0000002 ;
+    rdfs:subClassOf sepio:0004097 ;
     rdfs:label "proband with autosomal dominant null variant evidence line"@en .
 
 sepio:0004080 a owl:Class ;
-    rdfs:subClassOf sepio:0000002 ;
+    rdfs:subClassOf sepio:0004097 ;
     rdfs:label "proband with autosomal dominant other variant evidence line"@en .
+
+sepio:0004017 a owl:Class ;
+    rdfs:subClassOf sepio:0004097 ;
+    rdfs:label "proband with autosomal recessive de novo null variant evidence line"@en .
+
+sepio:0004018 a owl:Class ;
+    rdfs:subClassOf sepio:0004097 ;
+    rdfs:label "proband with autosomal recessive null variant evidence line"@en .
+
+sepio:0004019 a owl:Class ;
+    rdfs:subClassOf sepio:0004097 ;
+    rdfs:label "proband with autosomal recessive other variant evidence line"@en .
 
 sepio:0004012 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
@@ -200,17 +221,7 @@ sepio:0004015 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
     rdfs:label "model and rescue evidence line"@en .
 
-sepio:0004017 a owl:Class ;
-    rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "proband with autosomal recessive de novo null variant evidence line"@en .
 
-sepio:0004018 a owl:Class ;
-    rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "proband with autosomal recessive null variant evidence line"@en .
-
-sepio:0004019 a owl:Class ;
-    rdfs:subClassOf sepio:0000002 ;
-    rdfs:label "proband with autosomal recessive other variant evidence line"@en .
 
 sepio:0004020 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
