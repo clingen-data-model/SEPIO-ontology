@@ -124,6 +124,11 @@ sepio:0004510 a owl:NamedIndividual , skos:Concept ;
     sepio:0002506 1 ;
     skos:inScheme sepio:0004503 .
 
+sepio:0004511 a owl:NamedIndividual , skos:Concept ;
+    rdfs:label "no classification" ;
+    sepio:0002506 0 ; 
+    skos:inScheme sepio:0004503 .
+
 
 # criterion assessment valueset (same as acmg sepio? met/not met)
 

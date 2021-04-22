@@ -110,6 +110,11 @@ sepio:0004002 a owl:Class ;
     rdfs:subClassOf sepio:0000001 ;
     obo:IAO_0000115 "An assertion regarding the level of evidence supporting a gene validity proposition" ;
     rdfs:label "gene validity evidence level assertion" .
+
+sepio:0004098 a owl:Class ;
+    rdfs:subClassOf sepio:0004002 ;
+    obo:IAO_0000115 "An assertion regarding the level of evidence supporting a gene validity proposition. Automatic classification made based on the scoring of individual evidence items." ;
+    rdfs:label "gene validity evidence level auto classification" .
     
 sepio:0004003 a owl:Class ;
     rdfs:subClassOf sepio:0000037 ;
