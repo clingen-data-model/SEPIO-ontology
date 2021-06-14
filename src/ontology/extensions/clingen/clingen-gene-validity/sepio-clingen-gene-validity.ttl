@@ -562,6 +562,18 @@ sepio:0004095 a skos:Concept, sepio:0004064 ;
 
 sepio:0004096 a skos:Concept, sepio:0004064 ;
     rdfs:label "ClinGen Gene Validity Evaluation Criteria SOP8" .
+
+sepio:0004099 a owl:Class ;
+    rdfs:subClassOf sepio:0000048 ;
+    rdfs:label "secondary contributor role" ;
+    obo:IAO_0000115 "A role borne by an agent signalling a contribution to the relevant artifact that complements but is not the major contribution relevant to its creation." .
+
+sepio:0004112 a owl:Class ;
+    rdfs:subClassOf sepio:0000155 ;
+    rdfs:label "secondary approver role" ;
+    obo:IAO_0000115 "A role borne by an agent signalling approval of the artifact. Not the primary agent required for review and approval, but a secondary " .
+    
+    
     
 
 
