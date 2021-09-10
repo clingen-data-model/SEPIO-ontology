@@ -123,11 +123,296 @@ sepio:0004510 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "refuting evidence" ;
     sepio:0002506 1 ;
     skos:inScheme sepio:0004503 .
+    
+sepio:0004540 a owl:NamedIndividual , skos:Concept ;
+    rdfs:label "disputed" ;
+    sepio:0002506 -1 ;
+    skos:inScheme sepio:0004503 .
 
 sepio:0004511 a owl:NamedIndividual , skos:Concept ;
     rdfs:label "no classification" ;
     sepio:0002506 0 ; 
     skos:inScheme sepio:0004503 .
 
-
+sepio:0004512 a sepio:0000412 ;
+    rdfs:label "gene validity criteria value set" ;
+    iao:0000115 "A value set containing individual and aggregate criteria components of the ClinGen Gene Validity Assertion Criteria." .
     
+sepio:0004513 a skos:Concept ;
+    rdfs:label "total genetic evidence criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 12 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004514 a skos:Concept ;
+    rdfs:label "total autosomal dominant de novo variant evidence criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 12 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 .
+
+sepio:0004515 a skos:Concept ;
+    rdfs:label "total autosomal dominant null variant evidence criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 10 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 .
+        
+sepio:0004516 a skos:Concept ;
+    rdfs:label "total autosomal dominant other variant evidence criteria" ;
+    sepio:0004113 0 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 7 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 .
+        
+sepio:0004517 a skos:Concept ;
+    rdfs:label "autosomal dominant de novo variant evidence criteria" ;
+    sepio:0004113 2 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 3 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 .
+        
+sepio:0004518 a skos:Concept ;
+    rdfs:label "autosomal dominant null variant evidence criteria" ;
+    sepio:0004113 1.5; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 .
+
+sepio:0004519 a skos:Concept ;
+    rdfs:label "autosomal dominant other variant evidence criteria" ;
+    sepio:0004113 0.5 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 1.5 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 .
+        
+sepio:0004520 a skos:Concept ;
+    rdfs:label "autosomal recessive de novo or null variant criteria" ;
+    sepio:0004113 2 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 3 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 .
+
+sepio:0004521 a skos:Concept ;
+    rdfs:label "autosomal recessive other variant criteria" ;
+    sepio:0004113 1 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 1.5 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 .
+
+sepio:0004522 a skos:Concept ;
+    rdfs:label "segregation score criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 3 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004523 a skos:Concept ;
+    rdfs:label "case control single variant study criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 6 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004524 a skos:Concept ;
+    rdfs:label "case control aggregate variant study criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 6 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004525 a skos:Concept ;
+    rdfs:label "total experimental evidence criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 6 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004526 a skos:Concept ;
+    rdfs:label "total function evidence criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004527 a skos:Concept ;
+    rdfs:label "total functional alteration evidence criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004528 a skos:Concept ;
+    rdfs:label "total model and rescue evidence criteria" ;
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 4 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004529 a skos:Concept ;
+    rdfs:label "biochemical function evidence criteria" ;
+    sepio:0004113 0.5 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004530 a skos:Concept ;
+    rdfs:label "protein interaction evidence criteria" ;
+    sepio:0004113 0.5 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004531 a skos:Concept ;
+    rdfs:label "gene expression evidence criteria" ;
+    sepio:0004113 0.5 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004532 a skos:Concept ;
+    rdfs:label "patient cell functional alteration evidence criteria" ;
+    sepio:0004113 1 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004533 a skos:Concept ;
+    rdfs:label "non-patient cell functional alteration evidence criteria" ;
+    sepio:0004113 0.5 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 1 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004534 a skos:Concept ;
+    rdfs:label "non-human model evidence criteria" ;
+    sepio:0004113 2 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 4 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004535 a skos:Concept ;
+    rdfs:label "cell-culture model evidence criteria" ;
+    sepio:0004113 1 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004536 a skos:Concept ;
+    rdfs:label "rescue in human evidence criteria" ;
+    sepio:0004113 2 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 4 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004537 a skos:Concept ;
+    rdfs:label "rescue in non-human criteria" ;
+    sepio:0004113 2 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 4 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004538 a skos:Concept ;
+    rdfs:label "rescue in cell-culture criteria" ;
+    sepio:0004113 1 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
+
+sepio:0004539 a skos:Concept ;
+    rdfs:label "rescue in patient cells criteria" ;
+    sepio:0004113 1 ; # default
+    sepio:0004114 0 ; # minimum
+    sepio:0004115 2 ; # maximum
+    skos:inScheme sepio:0004512 ,
+        sepio:0004093 ,
+        sepio:0004094 ,
+        sepio:0004095 ,
+        sepio:0004096 .
