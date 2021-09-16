@@ -143,7 +143,7 @@ sepio:0004100 a owl:Class ;
 
 sepio:0004097 a owl:Class ;
     rdfs:subClassOf sepio:0004100 ;
-    obo:IAO_0000115 "Evidence line assessing the evidence provided by a single proband." ;
+    obo:IAO_0000115 "Evidence line assessing the evidence provided by a single proband or variant." ;
     rdfs:label "variant evidence line"@en .
 
 sepio:0004102 a owl:Class ;
@@ -344,12 +344,24 @@ sepio:0004032 a owl:Class ;
     rdfs:subClassOf sepio:0004110 ;
     rdfs:label "rescue in patient cells evidence line"@en .
 
+### SOP v8 variant evidence lines
+
+sepio:0004120 a owl:Class ;
+    rdfs:subClassOf sepio:0004097 ;
+    obo:IAO_0000115 "Evidence line describing a null variant in a patient presenting with a specific phenotype." ;
+    rdfs:label "null variant evidence line" .
+
+sepio:0004121 a owl:Class ;
+    rdfs:subClassOf sepio:0004097 ;
+    obo:IAO_0000115 "Evidence line describing a non-null variant in a patient presenting with a specific phenotype." ;
+    rdfs:label "non-null variant evidence line" .
+    
 ### Evidence Items ###
 
 sepio:0004081 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
     rdfs:label "proband with variant evidence item"@en ;
-    obo:IAO_0000115 "Evidence item signifying a variant present in a proband presenting with a specific phenotype. Not to be instantiated directly, but exists as a superclass of more specific evidence items used in gene curation."@en .
+    obo:IAO_0000115 "Evidence item signifying a proband presenting with a specific phenotype with a suspected deleterious variant. Not to be instantiated directly, but exists as a superclass of more specific evidence items used in gene curation."@en .
     
 sepio:0004033 a owl:Class ;
     rdfs:subClassOf sepio:0004081 ;
@@ -362,6 +374,28 @@ sepio:0004034 a owl:Class ;
 sepio:0004035 a owl:Class ;
     rdfs:subClassOf sepio:0004081 ;
     rdfs:label "proband with other variant evidence item"@en .
+
+### SOP v8 variant evidence items
+
+sepio:0004116 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    rdfs:label "variant evidence item"@en ;
+    obo:IAO_0000115 "Evidence item signifying a variant present in a proband presenting with a specific phenotype."
+
+sepio:0004117 a owl:Class ;
+    rdfs:subClassOf sepio:0004116 ;
+    obo:IAO_0000115 "Evidence item signifying a null variant present in a proband presenting with a specific phenotype." ;
+    rdfs:label "null variant evidence item"@en .
+
+sepio:0004118 a owl:Class ;
+    rdfs:subClassOf sepio:0004116 ;
+    obo:IAO_0000115 "Evidence item signifying a non-null variant present in a proband presenting with a specific phenotype. Other evidence may exist regarding the functional impact of the variant." ;
+    rdfs:label "non-null variant evidence item"@en .
+
+sepio:0004119 a owl:Class ;
+    rdfs:subClassOf sepio:0000149 ;
+    obo:IAO_0000115 "Evidence item describing the functional impact of a variant on a protein. Typically used to justify the relevance of a variant in a gene validity curation." ;
+    rdfs:label "functional impact of variant evidence item" .
 
 sepio:0004036 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
