@@ -380,7 +380,7 @@ sepio:0004035 a owl:Class ;
 sepio:0004116 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
     rdfs:label "variant evidence item"@en ;
-    obo:IAO_0000115 "Evidence item signifying a variant present in a proband presenting with a specific phenotype."
+    obo:IAO_0000115 "Evidence item signifying a variant present in a proband presenting with a specific phenotype." .
 
 sepio:0004117 a owl:Class ;
     rdfs:subClassOf sepio:0004116 ;
@@ -395,7 +395,7 @@ sepio:0004118 a owl:Class ;
 sepio:0004119 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
     obo:IAO_0000115 "Evidence item describing the functional impact of a variant on a protein. Typically used to justify the relevance of a variant in a gene validity curation." ;
-    rdfs:label "functional impact of variant evidence item" .
+    rdfs:label "variant functional impact evidence item" .
 
 sepio:0004036 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
