@@ -72,6 +72,12 @@ sepio:0004063 a owl:ObjectProperty ;
     obo:IAO_0000115 "Possibly obsolete?" ;
     rdfs:label "evidence score qualifier" .
 
+sepio:0004122 a owl:ObjectProperty ;
+    rdfs:label "has sequencing method" ;
+    obo:IAO_0000115 "Relationship between an entity and the sequencing method used in study, subject may be a study, an individual, or a family for which trait segregation is being described." .
+
+
+
 #################################################################
 #    Datatype Properties
 #################################################################
@@ -83,6 +89,20 @@ sepio:0004065 a owl:DatatypeProperty ;
 sepio:0004089 a owl:DatatypeProperty ;
     obo:IAO_0000115 "The statistical probability that two genetic loci are likely to be inherited together. [ NCI ]" ;
     rdfs:label "LOD Score" .
+
+sepio:0004124 a owl:DatatypeProperty ;
+    obo:IAO_0000115 "The statistical probability that two genetic loci are likely to be inherited together. [ NCI ]. This property reflects the score that was published in an article describing phenotypic segregation in a given family." ;
+    rdfs:label "Published LOD Score" .
+
+sepio:0004125 a owl:DatatypeProperty ;
+    obo:IAO_0000115 "The statistical probability that two genetic loci are likely to be inherited together. [ NCI ]. This property reflects the score that was calculated by the curator based on phenotypic segregation in a given family." ;
+    rdfs:label "Estimated LOD Score" .
+
+sepio:0004126 a owl:DatatypeProperty ;
+    obo:IAO_0000115 "The given evidence item meets the inclusion criteria for scoring. Typically used in the context of a segregation score." ;
+    rdfs:label "meets inclusion criteria" .
+
+
 
 #################################################################
 #    Classes
@@ -253,11 +273,20 @@ sepio:0004019 a owl:Class ;
     rdfs:label "proband with autosomal recessive other variant evidence line"@en .
 
 ### TODO investigate how segregation evidence is used.
+
 sepio:0004012 a owl:Class ;
     rdfs:subClassOf sepio:0004100 ;
     obo:IAO_0000115 "Evidence line representing the aggregate of all segregation evidence relevant to a gene validity assertion."@en ;
     rdfs:label "overall segregation evidence line"@en . 
 
+### may be able to use familycosegregationstatement
+sepio:0004123 a owl:Class ;
+    rdfs:subClassOf sepio:0000002 ;
+    rdfs:label "Fam"@en ;
+    obo:IAO_0000115 "Segregation evidence about a specific family in the context of a gene validity curation. Segregation was performed using multi-locus, whole exome, or genome analysis methods."@en .
+
+
+### May be obsolete 
 sepio:0004016 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
     obo:IAO_0000115 "Evidence line representing the aggregate of evidence across segregation studies on a gene-disease relationship where single-gene targed sequencing is used as the method to identify variants."@en ;
@@ -277,6 +306,8 @@ sepio:0004091 a owl:Class ;
     rdfs:subClassOf sepio:0000002 ;
     rdfs:label "family with multi-locus segregation evidence line"@en ;
     obo:IAO_0000115 "Segregation evidence about a specific family in the context of a gene validity curation. Segregation was performed using multi-locus, whole exome, or genome analysis methods."@en .
+
+### may be obsolete
 
 ### / segregation evidence
 
