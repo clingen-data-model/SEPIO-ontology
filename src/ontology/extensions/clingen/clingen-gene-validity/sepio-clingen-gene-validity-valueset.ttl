@@ -422,11 +422,11 @@ sepio:0004542 a sepio:0000412 ;
     rdfs:label "sequencing method value set" .
 
 sepio:0004541 a skos:Concept ;
-    skos:inScheme sepio:4542 ;
+    skos:inScheme sepio:0004542 ;
     rdfs:label "exome, genome, or all genes sequenced in linkage region" .
 
 sepio:0004543 a skos:Concept ;
-    skos:inScheme sepio:4542 ;
+    skos:inScheme sepio:0004542 ;
     rdfs:label "candidate gene sequencing" .
 
 
