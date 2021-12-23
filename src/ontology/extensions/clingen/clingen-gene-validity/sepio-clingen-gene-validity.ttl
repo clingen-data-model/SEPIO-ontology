@@ -150,6 +150,11 @@ sepio:0004082 a owl:Class ;
     obo:IAO_0000115 "Evidence line used in support of a gene validity evidence level assertion." ;
     rdfs:comment "Not intended to be directly instantiated, but rather serve as the root for all other gene validity evidence lines." .
 
+sepio:0004127 a owl:Class ;
+    rdfs:subClassOf sepio:0004082 ;
+    rdfs:label "unscoreable evidence line" ;
+    obo:IAO_0000115 "Evidence line used to annotate evidence that has been assessed, but cannot be used as evidence in support of the assertion." .
+
 sepio:0004083 a owl:Class ;
     rdfs:subClassOf sepio:0004082 ;
     rdfs:label "genetic evidence line" ;
