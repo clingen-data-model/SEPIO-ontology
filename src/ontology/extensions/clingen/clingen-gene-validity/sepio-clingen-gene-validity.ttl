@@ -76,7 +76,10 @@ sepio:0004122 a owl:ObjectProperty ;
     rdfs:label "has sequencing method" ;
     obo:IAO_0000115 "Relationship between an entity and the sequencing method used in study, subject may be a study, an individual, or a family for which trait segregation is being described." .
 
-
+sepio:0004129 a owl:ObjectProperty ;
+    rdfs:label "has variant" ;
+    obo:IAO_0000115 "Relationship between a proband or other individual and a variant within the proband's genotype" .
+    
 
 #################################################################
 #    Datatype Properties
