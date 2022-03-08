@@ -430,4 +430,147 @@ sepio:0004543 a skos:Concept ;
     rdfs:label "candidate gene sequencing" .
 
 
-    
+# TON
+# age unit valueset
+sepio:0004551 a owl:NamedIndividual , sepio:0000412 ;
+    iao:0000115 "A value set of appropriate terms for the age unit of an individual."@en ;
+    rdfs:label "gene validity age unit value set"@en .
+# http://purl.obolibrary.org/obo/SEPIO_0002506    
+sepio:0004552 a skos:Concept ; 
+    rdfs:label "Days" ;
+    sepio:0002506 "0" ;
+    skos:inScheme sepio:0004551 .
+
+sepio:0004553 a skos:Concept ;
+    rdfs:label "Hours" ;
+    sepio:0002506 1 ;
+    skos:inScheme sepio:0004551 .
+
+sepio:0004554 a skos:Concept ;
+    rdfs:label "Months" ;
+    sepio:0002506 2 ;
+    skos:inScheme sepio:0004551 .
+
+sepio:0004555 a skos:Concept ;
+    rdfs:label "Weeks" ;
+    sepio:0002506 3 ;
+    skos:inScheme sepio:0004551 .
+
+sepio:0004556 a skos:Concept ;
+    rdfs:label "Weeks gestation" ;
+    sepio:0002506 4 ;
+    skos:inScheme sepio:0004551 .
+
+sepio:0004557 a skos:Concept ;
+    rdfs:label "Years" ;
+    sepio:0002506 5 ;
+    skos:inScheme sepio:0004551 .
+
+# TON
+# age type valueset
+sepio:0004561 a owl:NamedIndividual , sepio:0000412 ;
+    iao:0000115 "A value set of appropriate terms for the age type measurement of an individual."@en ;
+    rdfs:label "gene validity age type value set"@en .
+# http://purl.obolibrary.org/obo/SEPIO_0002506    
+sepio:0004562 a skos:Concept ; 
+    rdfs:label "Death" ;
+    sepio:0002506 "0" ;
+    skos:inScheme sepio:0004561 .
+
+sepio:0004563 a skos:Concept ;
+    rdfs:label "Diagnosis" ;
+    sepio:0002506 1 ;
+    skos:inScheme sepio:0004561 .
+
+sepio:0004564 a skos:Concept ;
+    rdfs:label "Onset" ;
+    sepio:0002506 2 ;
+    skos:inScheme sepio:0004561 .
+
+sepio:0004565 a skos:Concept ;
+    rdfs:label "Report" ;
+    sepio:0002506 3 ;
+    skos:inScheme sepio:0004561 .
+
+# TON
+# ethnicity valueset
+sepio:0004567 a owl:NamedIndividual , sepio:0000412 ;
+    iao:0000115 "A value set of appropriate terms for the ethnicity of an individual."@en ;
+    rdfs:label "gene validity ethnicity value set"@en .
+# http://purl.obolibrary.org/obo/SEPIO_0002506    
+sepio:0004568 a skos:Concept ; 
+    rdfs:label "Hispanic or Latino" ;
+    sepio:0002506 "0" ;
+    skos:inScheme sepio:0004567 .
+
+sepio:0004569 a skos:Concept ;
+    rdfs:label "Not Hispanic or Latino" ;
+    sepio:0002506 1 ;
+    skos:inScheme sepio:0004567 .
+
+sepio:0004570 a skos:Concept ;
+    rdfs:label "Unknown" ;
+    sepio:0002506 2 ;
+    skos:inScheme sepio:0004567 .
+
+# TON
+# sex valueset
+sepio:0004573 a owl:NamedIndividual , sepio:0000412 ;
+    iao:0000115 "A value set of appropriate terms for the sex of an individual."@en ;
+    rdfs:label "gene validity sex value set"@en .
+# http://purl.obolibrary.org/obo/SEPIO_0002506    
+sepio:0004574 a skos:Concept ; 
+    rdfs:label "Ambiguous" ;
+    sepio:0002506 0 ;
+    skos:inScheme sepio:0004573 .
+
+sepio:0004575 a skos:Concept ;
+    rdfs:label "Female" ;
+    sepio:0002506 1 ;
+    skos:inScheme sepio:0004573 .
+
+sepio:0004576 a skos:Concept ;
+    rdfs:label "Intersex" ;
+    sepio:0002506 2 ;
+    skos:inScheme sepio:0004573 .
+
+sepio:0004578 a skos:Concept ;
+    rdfs:label "Male" ;
+    sepio:0002506 3 ;
+    skos:inScheme sepio:0004573 .
+
+sepio:0004579 a skos:Concept ;
+    rdfs:label "Unknown" ;
+    sepio:0002506 4 ;
+    skos:inScheme sepio:0004573 .
+
+# TON
+# scoreStatus valueset
+sepio:0004580 a owl:NamedIndividual , sepio:0000412 ;
+    iao:0000115 "A value set of appropriate terms for the scoreStatus for a line of evidence."@en ;
+    rdfs:label "gene validity score status value set"@en .
+# http://purl.obolibrary.org/obo/SEPIO_0002506    
+sepio:0004581 a skos:Concept ; 
+    rdfs:label "Contradicts" ;
+    sepio:0002506 0 ;
+    skos:inScheme sepio:0004580 .
+
+sepio:0004582 a skos:Concept ;
+    rdfs:label "Review" ;
+    sepio:0002506 1 ;
+    skos:inScheme sepio:0004580 .
+
+sepio:0004583 a skos:Concept ;
+    rdfs:label "Score" ;
+    sepio:0002506 2 ;
+    skos:inScheme sepio:0004580 .
+
+sepio:0004584 a skos:Concept ;
+    rdfs:label "Supports" ;
+    sepio:0002506 3 ;
+    skos:inScheme sepio:0004580 .
+
+sepio:0004585 a skos:Concept ;
+    rdfs:label "none" ;
+    sepio:0002506 4 ;
+    skos:inScheme sepio:0004580 .
