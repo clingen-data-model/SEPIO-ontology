@@ -574,3 +574,81 @@ sepio:0004585 a skos:Concept ;
     rdfs:label "none" ;
     sepio:0002506 4 ;
     skos:inScheme sepio:0004580 .
+
+# TON
+# scoreStatus valueset
+sepio:0004590 a owl:NamedIndividual , sepio:0000412 ;
+    iao:0000115 "A value set of appropriate terms for genotyping methods."@en ;
+    rdfs:label "gene validity genotyping methods value set"@en .
+# http://purl.obolibrary.org/obo/SEPIO_0002506    
+
+sepio:0004591 a skos:Concept ; 
+    rdfs:label "Chromosomal microarray" ;
+    sepio:0002506 0 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004592 a skos:Concept ; 
+    rdfs:label "Denaturing gradient gel" ;
+    sepio:0002506 1 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004593 a skos:Concept ; 
+    rdfs:label "Exome sequencing" ;
+    sepio:0002506 2 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004594 a skos:Concept ; 
+    rdfs:label "Genotyping" ;
+    sepio:0002506 3 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004595 a skos:Concept ; 
+    rdfs:label "High resolution melting" ;
+    sepio:0002506 4 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004596 a skos:Concept ; 
+    rdfs:label "Homozygosity mapping" ;
+    sepio:0002506 5 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004597 a skos:Concept ; 
+    rdfs:label "Linkage analysis" ;
+    sepio:0002506 6 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004598 a skos:Concept ; 
+    rdfs:label "Next generation sequencing panels" ;
+    sepio:0002506 7 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004599 a skos:Concept ; 
+    rdfs:label "Other" ;
+    sepio:0002506 8 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004600 a skos:Concept ; 
+    rdfs:label "PCR" ;
+    sepio:0002506 9 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004601 a skos:Concept ; 
+    rdfs:label "Restriction digest" ;
+    sepio:0002506 10 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004602 a skos:Concept ; 
+    rdfs:label "SSCP" ;
+    sepio:0002506 11 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004603 a skos:Concept ;
+    rdfs:label "Sanger sequencing";
+    sepio:0002506 12 ;
+    skos:inScheme sepio:0004590 .
+
+sepio:0004604 a skos:Concept ; 
+    rdfs:label "Whole genome shotgun sequencing" ;
+    sepio:0002506 13 ;
+    skos:inScheme sepio:0004590 .
+
