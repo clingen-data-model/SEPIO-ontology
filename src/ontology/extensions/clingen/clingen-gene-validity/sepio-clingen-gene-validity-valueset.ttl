@@ -652,3 +652,19 @@ sepio:0004604 a skos:Concept ;
     sepio:0002506 13 ;
     skos:inScheme sepio:0004590 .
 
+# TON
+# variantType valueset
+sepio:0004610 a owl:NamedIndividual , sepio:0000412 ;
+    iao:0000115 "A value set of appropriate terms for variant type."@en ;
+    rdfs:label "gene validity variant type value set"@en .
+# http://purl.obolibrary.org/obo/SEPIO_0002506    
+
+sepio:0004611 a skos:Concept ; 
+    rdfs:label "Other Variant Type" ;
+    sepio:0002506 0 ;
+    skos:inScheme sepio:0004610 .
+
+sepio:0004612 a skos:Concept ; 
+    rdfs:label "Predicted Or Proven Null" ;
+    sepio:0002506 1 ;
+    skos:inScheme sepio:0004610 .
