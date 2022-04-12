@@ -718,39 +718,39 @@ sepio:0004154 a owl:DataProperty ;
     rdfs:label "number of genotyped sequenced" ;
     obo:IAO_0000115 "Gene validity cohort number of genotyped sequenced." .
 
-sepio:0004155 a owl:DataProperty
+sepio:0004155 a owl:DataProperty ;
     rdfs:label "number with variant" ;
     obo:IAO_0000115 "Gene validity cohort number with variant." .
 
-sepio:0004157 a owl:DataProperty
+sepio:0004157 a owl:DataProperty ;
     rdfs:label "detection method" ;
     obo:IAO_0000115 "Gene validity detection method." .
 
-sepio:0004160 a owl:DataProperty
+sepio:0004160 a owl:DataProperty ;
     rdfs:label "detection method" ;
     obo:IAO_0000115 "Gene validity detection method." .
 
-sepio:0004161 a owl:DataProperty
+sepio:0004161 a owl:DataProperty ;
     rdfs:label "detection method" ;
     obo:IAO_0000115 "Gene validity detection method." .
 
-sepio:0004162 a owl:DataProperty
+sepio:0004162 a owl:DataProperty ;
     rdfs:label "detection method" ;
     obo:IAO_0000115 "Gene validity detection method." .
 
-sepio:0004164 a owl:ObjectProperty
+sepio:0004164 a owl:ObjectProperty ;
     rdfs:label "statistical significance" ;
     obo:IAO_0000115 "Gene validity statistical significance." .
 
-sepio:0004165 a owl:DataProperty
+sepio:0004165 a owl:DataProperty ;
     rdfs:label "statistical significance type" ;
     obo:IAO_0000115 "Gene validity statistical significance type." .
 
-sepio:0004166 a owl:DataProperty
+sepio:0004166 a owl:DataProperty ;
     rdfs:label "statistical significance value type" ;
     obo:IAO_0000115 "Gene validity statistical significance value type." .
 
-sepio:0004167 a owl:DataProperty
+sepio:0004167 a owl:DataProperty ;
     rdfs:label "statistical significance value" ;
     obo:IAO_0000115 "Gene validity statistical significance value." .
 
