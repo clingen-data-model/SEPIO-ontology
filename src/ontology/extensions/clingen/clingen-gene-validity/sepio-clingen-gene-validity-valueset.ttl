@@ -466,7 +466,6 @@ sepio:0004557 a skos:Concept ;
     sepio:0002506 5 ;
     skos:inScheme sepio:0004551 .
 
-# TON
 # age type valueset
 sepio:0004561 a owl:NamedIndividual , sepio:0000412 ;
     iao:0000115 "A value set of appropriate terms for the age type measurement of an individual."@en ;
