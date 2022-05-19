@@ -733,13 +733,13 @@ sepio:0004160 a owl:DataProperty ;
     rdfs:label "multiple authors" ;
     obo:IAO_0000115 "Gene validity paper with multiple authors." .
 
-#sepio:0004161 a owl:DataProperty ;
-#    rdfs:label "detection method" ;
-#    obo:IAO_0000115 "Gene validity detection method." .
+sepio:0004161 a owl:DataProperty ;
+    rdfs:label "maternity paternity confirmed" ;
+    obo:IAO_0000115 "Gene validity maternity paternity confirmed." .
 
-#sepio:0004162 a owl:DataProperty ;
-#    rdfs:label "detection method" ;
-#    obo:IAO_0000115 "Gene validity detection method." .
+sepio:0004162 a owl:DataProperty ;
+    rdfs:label "earliest article" ;
+    obo:IAO_0000115 "Gene validity assertion earliest article." .
 
 sepio:0004164 a owl:ObjectProperty ;
     rdfs:label "statistical significance" ;
