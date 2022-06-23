@@ -761,7 +761,7 @@ sepio:0004170 a owl:Class ;
     rdfs:subClassOf sepio:0000149 ;
     rdfs:label "case control evidence item"@en .
 
-sepio:0004171 a owl:DataProperty ;
+sepio:0004172 a owl:DataProperty ;
     rdfs:label "family mode of inheritance" ;
     obo:IAO_0000115 "Gene validity family mode of inheritance value." .
 
