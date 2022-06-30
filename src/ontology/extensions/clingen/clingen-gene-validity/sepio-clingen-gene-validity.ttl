@@ -765,6 +765,10 @@ sepio:0004172 a owl:DataProperty ;
     rdfs:label "family mode of inheritance" ;
     obo:IAO_0000115 "Gene validity family mode of inheritance value." .
 
+sepio:0004174 a owl:Class ;
+    rdfs:subclassOf sepio:0004097 ;
+    rdfs:label "proband score cap evidence line."@en .
+
 sepio:0004180 a owl:Class ;
     rdfs:subClassOf sepio:0004022 ;
     rdfs:label "biochemical function type A evidence line"@en .
