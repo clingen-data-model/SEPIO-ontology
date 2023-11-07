@@ -639,6 +639,9 @@ sepio:0004096 a skos:Concept, sepio:0004064 ;
 sepio:0004171 a skos:Concept, sepio:0004064 ;
     rdfs:label "ClinGen Gene Validity Evaluation Criteria SOP9" .
 
+sepio:0004190 a skos:Concept, sepio:0004064 ;
+    rdfs:label "ClinGen Gene Validity Evaluation Criteria SOP10" .
+    
 sepio:0004099 a owl:Class ;
     rdfs:subClassOf sepio:0000048 ;
     rdfs:label "secondary contributor role" ;
